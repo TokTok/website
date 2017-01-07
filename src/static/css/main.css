@@ -1,0 +1,76 @@
+html {
+  background-color: #eee;
+}
+
+body {
+  background-color: #fff;
+  box-shadow: 0 0 3px #888888;
+}
+
+#content {
+  margin-left: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+h1 {
+  color: #38761d;
+}
+
+h2.subtitle {
+  color: #666;
+  font-size: 17px;
+  border: none;
+}
+
+h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+@media (min-width: 1050px) {
+  #sidemenu {
+    background-color: #fff;
+    box-shadow: 0 0 3px #888888;
+    position: fixed;
+    top: 1ex;
+    left: 1ex;
+    padding: 1em;
+  }
+}
+
+#sidemenu > ul {
+  margin: 0;
+  padding: 0;
+}
+
+#sidemenu li.current a {
+  color: black;
+}
+
+figure {
+  margin-left: 0;
+}
+
+.kw, .ot {
+  color: blue;
+}
+
+.dt {
+  color: brown;
+}
+
+tr.packet-row:nth-child(odd) {
+  background: #eee;
+}
+
+.pr-table {
+  width: 100%;
+}
+
+/* I don't like this. */
+.pr-table td { padding-left: .5em; padding-right: .5em; }
+.pr-table td:nth-child(1) { width: 2.5em; text-align: center; }
+.pr-table td:nth-child(2) { width: 10em; word-break: break-all; }
+.pr-table td:nth-child(3) { width: 20em; }
+.pr-table td:nth-child(4) { width: 6em; }
+.pr-table td:nth-child(5) { width: 10em; word-break: break-all; }

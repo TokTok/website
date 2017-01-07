@@ -1,0 +1,48 @@
+---
+layout: default
+title: Pull Requests
+permalink: pulls.html
+menu_index: 5
+---
+
+<script>
+  var repoSection = document.querySelector('main');
+  var requestHeaders = new Headers();
+  var requestInit = { method: 'GET',
+                      headers: requestHeaders,
+                      mode: 'cors',
+                      cache: 'default' };
+
+  fetch('https://git-critique.herokuapp.com/hello/pulls', requestInit)
+  .then(function(response) { return response.json(); })
+  .then(function(json) {
+    for (var i = 0; i < json.length; i++) {
+      if (json[i].length > 0) {
+        var repoTitle = document.createElement('h2');
+        repoTitle.innerHTML = json[i][0].prRepoName;
+        repoSection.appendChild(repoTitle);
+
+        var prTable = document.createElement('table');
+        prTable.className = "pr-table"
+        var prHeaders = document.createElement('tr');
+        prHeaders.innerHTML = "<th>" + "#"         + "</th>\
+                               <th>" + "Branch"    + "</th>\
+                               <th>" + "Title"     + "</th>\
+                               <th>" + "State"     + "</th>\
+                               <th>" + "Reviewers" + "</th>";
+        prTable.appendChild(prHeaders);
+
+        for(var j = 0; j < json[i].length; j++) {
+          var listItem = document.createElement('tr');
+          listItem.innerHTML = "<td>" + json[i][j].prNumber    + "</td>\
+                                <td>" + json[i][j].prBranch    + "</td>\
+                                <td>" + json[i][j].prTitle     + "</td>\
+                                <td>" + json[i][j].prState     + "</td>\
+                                <td>" + json[i][j].prReviewers + "</td>";
+          prTable.appendChild(listItem);
+        }
+        repoSection.appendChild(prTable);
+      }
+    }
+  });
+</script>

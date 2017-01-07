@@ -1,0 +1,5 @@
+---
+layout: default
+title: Changelog for c-toxcore
+permalink: changelog/c-toxcore.html
+---

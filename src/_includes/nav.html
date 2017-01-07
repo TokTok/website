@@ -1,0 +1,12 @@
+<nav id="sidemenu">
+  <ul class="nav tree">
+    {% assign nav_pages = site.html_pages | sort: 'menu_index' %}
+    {% for p in nav_pages %}
+      {% if p.title and p.menu_index %}
+      <li{% if p.url == page.url %} class="current"{% endif %}>
+        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
