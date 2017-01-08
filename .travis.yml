@@ -1,15 +1,25 @@
+language: ruby
+
+rvm:
+- 2.0
+
+env:
+  global:
+    # GITHUB_TOKEN=secret
+    secure: CKGYCWmvjFI9W5xqlci08m1ca8N5YzHx3PofyZ9OeMBjULL5VdgC58yDCBz/QEOI4p4EmwONmyfTXvV5BPQfV+bJV2DmmC4UbjIjA3mN4PpZNnSLGPV5qih3XgRYif3Ik84I8wBcwPKeoVxQTnD/QmaO+UgH687d0DLQnL3vFAzx+lpuSjiixJp1NIctgbyEV0BUcR8lgX3X99x4kmFWebwVytjZyBWETc5s/4XPkRaZNFVKZyrqCxR49U97g3pNa+466l9hWij/Da+18fIpUpHnAQni7/e9bAln8yK5KcZC8SkkuXIdVW8zk33ZL6gbkDoyeg6eD1QZjsf0y5L6uF5p9qrJGIyjYHG514CTVibNY1dMWqytVJ0ptL28Der/wMEMHgLomv6YAMHinaFtemtaVZcuesTM8IDlHxkqcP7hwO57J6D3uzlep95d6tv3DIjqFdhWB/qRuGEQZeqZVjUOxmr+QQnSMgHXA50VmTSBj2YXkHEAevm2yMlJu7PfplAVvPcnRdG/Wm59vO0dOEA7iLJkQv1IXDtE7ytTvQ7t45QoU58W+rqvZyLB2Mkf9M6maSqd4COe72qWT4ptZPq0Fms3n74t4EB2xGQczbVO858c/YKq+oXJLTpzZ0FbB9l9u32RCG13MWRRwLvBZSvUcRW1IaQqCR0GEymMY70=
+
+install:
+- gem install jekyll
+
+script:
+- make toktok-site
+
 after_success:
 - git config --global push.default simple
 - git config --global user.email "deploy@travis-ci.org"
 - git config --global user.name "Travis Deployer"
 - if [ -n "$GITHUB_TOKEN" ]; then make upload; fi
+
 branches:
   only:
   - master
-install:
-  - gem install jekyll
-language: ruby
-rvm:
-  - 2.0
-script:
-  - make toktok-site
