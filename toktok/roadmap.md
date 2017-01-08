@@ -10,6 +10,9 @@ ordered by time and priority, but no times are assigned. Some of these projects
 are part of the [startup phases](plan.html). The more advanced milestones will
 be started after the project has achieved some stability.
 
+A concrete roadmap built from GitHub issues and pull requests can be found here:
+- [c-toxcore](roadmap/c-toxcore.html)
+
 The milestones presented here are flexible. Priorities might change in the
 future as the landscape shifts and our target audience requires features at
 different times.
