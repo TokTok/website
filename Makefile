@@ -15,6 +15,6 @@ upload: toktok-site
 	rm -rf $(WEB_NAME)/*
 	mv toktok-site/* $(WEB_NAME)/
 	rmdir toktok-site
-	cd $(WEB_NAME) && git add .
+	cd $(WEB_NAME) && git add -A .
 	cd $(WEB_NAME) && git commit -a --amend -m'Updated website'
 	cd $(WEB_NAME) && git push --force
