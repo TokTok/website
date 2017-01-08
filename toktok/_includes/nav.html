@@ -4,7 +4,7 @@
     {% for p in nav_pages %}
       {% if p.title and p.menu_index %}
       <li{% if p.url == page.url %} class="current"{% endif %}>
-        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+        <a href="{{ relative }}{{ p.url | remove_first:'/' }}">{{ p.title }}</a>
       </li>
       {% endif %}
     {% endfor %}
