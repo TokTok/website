@@ -10,7 +10,7 @@ Language independent fuzzing and unit testing for Tox implementations
 
 The goal of this project is to create a language-neutral test framework to
 validate any [Tox Core Protocol](https://toktok.github.io/spec) implementation,
-including the C reference implementation [libtoxcore](https://github.com/irungentoo/toxcore).
+including the C reference implementation [libtoxcore](https://github.com/toktok/c-toxcore).
 We aim to create an exhaustive test suite using this framework to ensure
 compatibility and correctness of all protocol implementations. The test suite
 aims to provide validation, not verification, meaning we do not aim to prove
@@ -31,8 +31,7 @@ specific bugs or regressions is currently difficult. The tests were also
 written by the same person who wrote the tested code. This tends to lead to
 implementation-guided tests, which easily omits some corner cases.
 
-Testing new implementations such as [Zetox](https://github.com/zetok/tox),
-[Gotox](https://github.com/vikstrous/gotox), and
+Testing new implementations such as [Zetox](https://github.com/zetok/tox) and
 [HsTox](https://github.com/TokTok/hs-toxcore) involves implementing networking
 and having it communicate with an existing Tox node running the C reference
 implementation. Doing automated tests of this kind is costly, as it requires

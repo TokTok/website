@@ -10,7 +10,7 @@ you want to make your own design proposal, use the [Design Proposal
 Template](design/template.html) and submit it for review to the [website
 repository](https://github.com/TokTok/website). The recommended format for
 design proposals is Markdown. You can use the [template Markdown
-file](https://raw.githubusercontent.com/TokTok/website/master/toktok/src/content/design/template.md)
+file](https://raw.githubusercontent.com/TokTok/website/master/toktok/design/template.md)
 as a basis for your proposal document.
 
 - [Design Proposal Template](design/template.html)
