@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ site.title }} - {{ page.title }}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncate: 160 }}">
 
   {% assign depth = page.url | append:'X' | split:'/' | size %}
   {% capture relative %}{% for i in (3..depth) %}../{% endfor %}{% endcapture %}
