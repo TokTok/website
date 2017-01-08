@@ -4,8 +4,6 @@ title: Contributing
 permalink: contributing.html
 ---
 
-% Contributing to TokTok
-
 This document serves as a non-binding simpler version of the [Contributor
 License Agreement](cla.html). Any errors in or misinterpretations of the
 following text have no legal effect. See CLA for the real thing that you can

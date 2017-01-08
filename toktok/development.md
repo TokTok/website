@@ -5,8 +5,6 @@ permalink: development.html
 menu_index: 9
 ---
 
-% Development process
-
 Tox and TokTok are software projects with very high security and stability
 requirements. It will potentially be used by hundreds of millions of people
 around the world. A security issue could have catastrophic consequences.

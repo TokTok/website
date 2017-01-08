@@ -4,8 +4,6 @@ title: CLA
 permalink: cla.html
 ---
 
-% Contributor License Agreement
-
 Thank you for your interest in contributing to the TokTok project ("We" or
 "Us").
 

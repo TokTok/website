@@ -4,8 +4,6 @@ title: Tox Core Test Framework
 permalink: design/testing.html
 ---
 
-% Tox Core Test Framework
-
 Language independent fuzzing and unit testing for Tox implementations
 
 # Objective

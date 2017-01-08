@@ -4,8 +4,6 @@ title: Design Proposal Template
 permalink: design/template.html
 ---
 
-% Design Proposal Template
-
 One sentence explaining what the proposal is about.
 
 # Objective
