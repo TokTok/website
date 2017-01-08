@@ -11,10 +11,10 @@ toktok-site: $(shell which jekyll) $(shell find toktok -type f)
 	cd toktok && jekyll build && mv _site ../$@
 
 upload: toktok-site
-	test -d $(WEB_NAME) || git clone --depth=1 $(WEB_REPO)
+	@test -d $(WEB_NAME) || git clone --depth=1 $(WEB_REPO)
 	rm -rf $(WEB_NAME)/*
 	mv toktok-site/* $(WEB_NAME)/
 	rmdir toktok-site
 	cd $(WEB_NAME) && git add -A .
-	cd $(WEB_NAME) && git commit -a --amend -m'Updated website'
-	cd $(WEB_NAME) && git push --force
+	cd $(WEB_NAME) && git commit --amend --reset-author -m'Updated website'
+	cd $(WEB_NAME) && git push --force --quiet
