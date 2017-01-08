@@ -15,6 +15,7 @@ as a basis for your proposal document.
 -   [Design Proposal Template](designs/template.html)
 -   [Original TokTok project plan](designs/plan.html)
 -   [Tox Core Test Framework](designs/testing.html)
+-   [Tox Quick Name Lookup](designs/tqnl.html)
 
 Older designs not yet in Markdown format:
 
