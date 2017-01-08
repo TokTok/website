@@ -1,7 +1,13 @@
 language: ruby
+dist: trusty
 
 rvm:
 - 2.0
+
+addons:
+  apt:
+    packages:
+    - pandoc
 
 env:
   global:
@@ -10,8 +16,10 @@ env:
 
 install:
 - gem install jekyll
+- git clone --depth=1 https://github.com/TokTok/hs-toxcore
 
 script:
+- (cd hs-toxcore && pandoc -f latex+lhs -t markdown_github src/tox/Network/Tox.lhs -o ../toktok/spec.md)
 - make toktok-site
 
 after_success:
