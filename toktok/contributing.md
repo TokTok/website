@@ -11,15 +11,17 @@ feed to [lawyer cats](static/img/lawyer-cat.jpg).
 
 # Definitions
 
-- "We" is toktok-team.
-- "You" is you, the person who submits code to GitHub.
-- "Contribution" is the code or documentation you wrote, pictures you drew, etc.
-- "Copyright" is [this scary thing](https://en.wikipedia.org/wiki/Copyright).
-- "Material" is the project you're submitting contributions to.
-- "Submit" is making a pull request on our GitHub repository.
-- "Submission Date" is the date on which you made the PR.
-- "Effective Date" is there so you can sign the CLA and it retroactively
-  applies to past contributions you made before signing it.
+-   "We" is toktok-team.
+-   "You" is you, the person who submits code to GitHub.
+-   "Contribution" is the code or documentation you wrote, pictures you drew,
+    etc.
+-   "Copyright" is [this scary
+    thing](https://en.wikipedia.org/wiki/Copyright).
+-   "Material" is the project you're submitting contributions to.
+-   "Submit" is making a pull request on our GitHub repository.
+-   "Submission Date" is the date on which you made the PR.
+-   "Effective Date" is there so you can sign the CLA and it retroactively
+    applies to past contributions you made before signing it.
 
 # Grant of Rights
 
@@ -97,8 +99,8 @@ agreement.
 
 ## Other agreements
 
-There are no other agreements, only ~~[ZUUL](static/img/zuul.jpg)~~CLA.  Things we
-agree on e.g. via IRC or otherwise are not legally binding.
+There are no other agreements, only ~~[ZUUL](static/img/zuul.jpg)~~CLA. Things
+we agree on e.g. via IRC or otherwise are not legally binding.
 
 ## Third parties
 
@@ -123,7 +125,7 @@ possible using other rules that are close to its intent.
 
 ## Changes to the Agreement
 
-If the CLA changes, it doesn't affect you, unless you sign the new one as well.
-The git history shows when you signed, so we can always tell which CLA was in
-effect at that time. CLA assistant also keeps track of this, and we
+If the CLA changes, it doesn't affect you, unless you sign the new one as
+well. The git history shows when you signed, so we can always tell which CLA
+was in effect at that time. CLA assistant also keeps track of this, and we
 periodically mirror that information as a CSV in the website repo.

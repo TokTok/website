@@ -25,7 +25,7 @@ by You, including copyright, moral and neighboring rights, as appropriate, for
 the full term of their existence including any extensions by You.
 
 "Material" means the work of authorship which is made available by Us to third
-parties.  When this Agreement covers more than one software project, the
+parties. When this Agreement covers more than one software project, the
 Material means the work of authorship to which the Contribution was Submitted.
 After You Submit the Contribution, it may be included in the Material.
 
@@ -65,7 +65,7 @@ You grant to Us a perpetual, worldwide, non-exclusive, transferable,
 royalty-free, irrevocable patent license, with the right to sublicense these
 rights to multiple tiers of sublicensees, to make, have made, use, sell, offer
 for sale, import and otherwise transfer the Contribution and the Contribution
-in combination with the Material (and portions of such combination).  This
+in combination with the Material (and portions of such combination). This
 license is granted only to the extent that the exercise of the licensed rights
 infringes such patent claims; and provided that this license is conditioned
 upon compliance with Section 2.3.
