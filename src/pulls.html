@@ -13,6 +13,13 @@ menu_index: 5
                       mode: 'cors',
                       cache: 'default' };
 
+  var stateIcon = {
+    clean: '&#x2705;',
+    dirty: '&#x274C;',
+    unknown: '&#x231b;',
+    unstable: '&#x1f6a7;',
+  };
+
   fetch('https://git-critique.herokuapp.com/hello/pulls', requestInit)
   .then(function(response) { return response.json(); })
   .then(function(json) {
@@ -25,20 +32,33 @@ menu_index: 5
         var prTable = document.createElement('table');
         prTable.className = "pr-table"
         var prHeaders = document.createElement('tr');
-        prHeaders.innerHTML = "<th>" + "#"         + "</th>\
-                               <th>" + "Branch"    + "</th>\
-                               <th>" + "Title"     + "</th>\
-                               <th>" + "State"     + "</th>\
-                               <th>" + "Reviewers" + "</th>";
+        prHeaders.innerHTML =
+          "<th>" + "#"         + "</th>" +
+          "<th>" + "Branch"    + "</th>" +
+          "<th>" + "Title"     + "</th>" +
+          "<th>" + "State"     + "</th>" +
+          "<th>" + "Reviewers" + "</th>";
         prTable.appendChild(prHeaders);
 
-        for(var j = 0; j < json[i].length; j++) {
+        for (var j = 0; j < json[i].length; j++) {
           var listItem = document.createElement('tr');
-          listItem.innerHTML = "<td>" + json[i][j].prNumber    + "</td>\
-                                <td>" + json[i][j].prBranch    + "</td>\
-                                <td>" + json[i][j].prTitle     + "</td>\
-                                <td>" + json[i][j].prState     + "</td>\
-                                <td>" + json[i][j].prReviewers + "</td>";
+          var prLink =
+            "<a href='https://github.com/TokTok/" + json[i][j].prRepoName +
+            "/pull/" + json[i][j].prNumber + "'>" + json[i][j].prNumber +
+            "</a>";
+          var reviewableLink =
+            " <a href='https://reviewable.io/reviews/toktok/" + json[i][j].prRepoName +
+            "/" + json[i][j].prNumber + "'>&#x1f50d;</a>";
+          var branchWithTooltip =
+            "<div class='tooltip'>" + json[i][j].prBranch +
+            "<span class='tooltiptext'>" + json[i][j].prUser + "</span>" +
+            "</div>";
+          listItem.innerHTML =
+            "<td>" + prLink + reviewableLink + "</td>" +
+            "<td>" + branchWithTooltip       + "</td>" +
+            "<td>" + json[i][j].prTitle      + "</td>" +
+            "<td>" + stateIcon[json[i][j].prState] + "</td>" +
+            "<td>" + json[i][j].prReviewers  + "</td>";
           prTable.appendChild(listItem);
         }
         repoSection.appendChild(prTable);
