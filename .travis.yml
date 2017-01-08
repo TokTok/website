@@ -1,0 +1,15 @@
+after_success:
+- git config --global push.default simple
+- git config --global user.email "deploy@travis-ci.org"
+- git config --global user.name "Travis Deployer"
+- if [ -n "$GITHUB_TOKEN" ]; then make upload; fi
+branches:
+  only:
+  - master
+install:
+  - gem install jekyll
+language: ruby
+rvm:
+  - 2.0
+script:
+  - make toktok-site
