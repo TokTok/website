@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+permalink: index.html
 menu_index: 1
 ---
 
