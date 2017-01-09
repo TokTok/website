@@ -19,6 +19,7 @@ install:
 - git clone --depth=1 https://github.com/TokTok/hs-toxcore
 
 script:
+- cp -a hs-toxcore/res toktok/
 - >
     (cd hs-toxcore && \
      pandoc -f latex+lhs -t native src/tox/Network/Tox.lhs \
