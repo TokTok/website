@@ -9,5 +9,9 @@
         {{ content }}
       </main>
     </div>
+    {% if page.js-includes %}
+    <!-- So js can load resources using relative paths. -->
+    <script>const relative = "{{ relative }}";</script>
+    {% endif %}
   </body>
 </html>
