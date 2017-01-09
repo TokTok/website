@@ -54,11 +54,11 @@ menu_index: 5
             "<span class='tooltiptext'>" + json[i][j].prUser + "</span>" +
             "</div>";
           listItem.innerHTML =
-            "<td>" + prLink + reviewableLink + "</td>" +
-            "<td>" + branchWithTooltip       + "</td>" +
-            "<td>" + json[i][j].prTitle      + "</td>" +
-            "<td>" + stateIcon[json[i][j].prState] + "</td>" +
-            "<td>" + json[i][j].prReviewers  + "</td>";
+            "<td>" + prLink + reviewableLink           + "</td>" +
+            "<td>" + branchWithTooltip                 + "</td>" +
+            "<td>" + json[i][j].prTitle                + "</td>" +
+            "<td>" + stateIcon[json[i][j].prState]     + "</td>" +
+            "<td>" + json[i][j].prReviewers.join(", ") + "</td>";
           prTable.appendChild(listItem);
         }
         repoSection.appendChild(prTable);
