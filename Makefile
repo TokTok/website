@@ -48,6 +48,9 @@ lint:
 	mdl -w -s .md-style.rb toktok
 
 check:
+	mkdir -p ~/.linkchecker/
+	echo "[filtering]" > ~/.linkchecker/linkcheckerrc
+	echo "ignorewarnings=http-robots-denied" >> ~/.linkchecker/linkcheckerrc
 	linkchecker --ignore-url "https://travis-ci.org.*" --ignore-url "irc://.*" toktok-site
 
 upload: toktok-site
