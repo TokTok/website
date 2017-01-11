@@ -19,7 +19,3 @@ When in doubt, you can always [contact us](index.html#contact-us) :-)
 
 -   [The Rust Reference](https://doc.rust-lang.org/reference.html)
 -   [Start with Rust](https://www.rust-lang.org/en-US/documentation.html)
-
-<iframe width="750" height="420"
-src="https://www.youtube.com/embed/IKqV7DB8Iwg?start=50" frameborder="0"
-allowfullscreen></iframe>
