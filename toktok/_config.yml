@@ -7,3 +7,7 @@ markdown: kramdown
 
 kramdown:
   header_offset: 1
+
+# do not generate pages from templates
+exclude:
+  - "*.dist"
