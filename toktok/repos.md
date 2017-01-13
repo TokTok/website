@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Repositories
 permalink: repos.html
 menu_index: 12

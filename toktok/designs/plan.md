@@ -1,5 +1,4 @@
 ---
-layout: default
 title: TokTok project plan
 permalink: designs/plan.html
 ---

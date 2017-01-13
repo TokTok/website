@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Design documents
 permalink: designs.html
 menu_index: 10
