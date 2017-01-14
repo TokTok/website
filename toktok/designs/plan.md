@@ -1,7 +1,7 @@
 ---
 layout: default
 title: TokTok project plan
-permalink: design/plan.html
+permalink: designs/plan.html
 ---
 
 This is the original TokTok project plan. Its original goals remain the same,
