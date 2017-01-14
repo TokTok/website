@@ -2,7 +2,7 @@
 layout: default
 title: Get started
 permalink: get-started.html
-menu_index: 5
+menu_index: 6
 ---
 
 Collection of resources that will help you get started writing code.

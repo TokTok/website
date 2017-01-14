@@ -2,7 +2,7 @@
 layout: default
 title: Changelogs
 permalink: changelog.html
-menu_index: 6
+menu_index: 5
 ---
 
 We generate changelogs for some of our projects using the
