@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Plan
-permalink: plan.html
-menu_index: 3
+title: TokTok project plan
+permalink: design/plan.html
 ---
+
+This is the original TokTok project plan. Its original goals remain the same,
+but the actual roadmap has been adapted to situational changes. We keep this
+document around for reference.
 
 # Objective
 

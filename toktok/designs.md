@@ -14,6 +14,7 @@ file](https://raw.githubusercontent.com/TokTok/website/master/toktok/design/temp
 as a basis for your proposal document.
 
 -   [Design Proposal Template](design/template.html)
+-   [Original TokTok project plan](design/plan.html)
 -   [Tox Core Test Framework](design/testing.html)
 
 Older designs not yet in Markdown format:
