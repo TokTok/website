@@ -49,7 +49,7 @@ hs-toxcore:
 # deployment tasks
 #
 lint:
-	mdl -w -s .md-style.rb toktok
+	mdl -i -w -s .md-style.rb toktok
 
 check:
 	mkdir -p ~/.linkchecker/
