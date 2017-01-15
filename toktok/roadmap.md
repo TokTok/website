@@ -6,9 +6,10 @@ menu_index: 4
 ---
 
 This is a timeless roadmap for current and upcoming TokTok projects. It is
-ordered by time and priority, but no times are assigned. Some of these projects
-are part of the [startup phases](plan.html). The more advanced milestones will
-be started after the project has achieved some stability.
+ordered by time and priority, but no times are assigned. Some of these
+projects are part of the [startup phases](designs/plan.html). The more
+advanced milestones will be started after the project has achieved some
+stability.
 
 A concrete roadmap built from GitHub issues and pull requests can be found here:
 
