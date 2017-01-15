@@ -22,7 +22,7 @@ install:
 script:
 - make lint
 - make toktok-site
-- make check || true
+- make check
 
 after_success:
 - git config --global push.default simple
