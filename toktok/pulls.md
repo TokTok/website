@@ -5,8 +5,8 @@ menu_index: 7
 js-includes: [twemoji-2.2.3.min.js, pr-table.js]
 ---
 
-Click on a PR number (the # column) to enter Reviewable.io and do a code
-review. Click on the branch to see the pull request on GitHub.
+Click on a PR number (the # column) to see the pull request on GitHub. Click
+on the branch to enter Reviewable.io and do a code review.
 
 Loading Pull requests...
 {: .loading}
