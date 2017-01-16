@@ -1,11 +1,11 @@
 ---
 title: Tox Quick Name Lookup Specification
+permalink: designs/tqnl.html
 authors: grayhatter
 first_proposed: 2016-10-07
 last_revision: 2017-01-13
-state: REVIEW
+state: FINAL
 revision: 1
-permalink: designs/tqnl.html
 ---
 
 Revision {{ page.revision }}.

@@ -1,6 +1,10 @@
 ---
 title: Tox Core Test Framework
 permalink: designs/testing.html
+authors: iphydf
+first_proposed: 2016-02-28
+last_revision: 2016-02-28
+state: FINAL
 ---
 
 Language independent fuzzing and unit testing for Tox implementations

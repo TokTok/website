@@ -1,6 +1,10 @@
 ---
 title: TokTok project plan
 permalink: designs/plan.html
+authors: iphydf
+first_proposed: 2016-01-15
+last_revision: 2017-01-09
+state: FINAL
 ---
 
 This is the original TokTok project plan. Its original goals remain the same,

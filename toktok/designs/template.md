@@ -1,6 +1,10 @@
 ---
 title: Design Proposal Template
 permalink: designs/template.html
+authors: you
+first_proposed: 2016-02-28
+last_revision: 2016-02-28
+state: DRAFT
 ---
 
 One sentence explaining what the proposal is about.
