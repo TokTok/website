@@ -13,43 +13,6 @@
  * except according to those terms.
  */
 
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Fira Sans'), url("../fonts/FiraSans-Regular.woff") format('woff');
-}
-@font-face {
-    font-family: 'Fira Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Fira Sans Medium'), url("../fonts/FiraSans-Medium.woff") format('woff');
-}
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Source Serif Pro'), url("../fonts/SourceSerifPro-Regular.woff") format('woff');
-}
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Heuristica Italic'), url("../fonts/Heuristica-Italic.woff") format('woff');
-}
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Source Serif Pro Bold'), url("../fonts/SourceSerifPro-Bold.woff") format('woff');
-}
-@font-face {
-    font-family: 'Source Code Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Source Code Pro'), url("../fonts/SourceCodePro-Regular.woff") format('woff');
-}
-
 *:not(body) {
   box-sizing: border-box;
 }

@@ -3,8 +3,11 @@
 ---
 @charset "utf-8";
 
-$main-fonts: "Source Serif Pro", Georgia, Times, "Times New Roman", serif;
-$heading-fonts: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$code-fonts: "Source Code Pro", Menlo, Monaco, Consolas, "DejaVu Sans Mono", monospace;
+$main-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Fira Sans",
+             "Roboto", "Ubuntu", "Cantarell", "Droid Sans", "Oxygen",
+             "Helvetica Neue", sans-serif;
+$heading-fonts: $main-fonts;
+$code-fonts: "Source Code Pro", "Liberation Mono", Menlo, Monaco, Consolas,
+             "DejaVu Sans Mono", Courier, monospace;
 
 @import "main";
