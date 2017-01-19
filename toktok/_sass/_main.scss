@@ -326,13 +326,8 @@ tr.packet-row:nth-child(odd) {
 .pr-table {
   width: 100%;
 
-  th {
-    font-size: .9em;
-  }
-
   td {
     padding: .3em;
-    font-size: .8em;
 
     &:nth-child(1) { width: 2.5em; text-align: center; }
     &:nth-child(2) { width: 10em; }
