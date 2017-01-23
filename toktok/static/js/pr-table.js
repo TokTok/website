@@ -53,11 +53,20 @@ function reloadPrTable() {
             "<div class='tooltip'>" + json[i][j].prTitle.replace(/_/g, "_<wbr>") +
             "&#8203;<span class='tooltiptext'>" + json[i][j].prUser + "</span>" +
             "</div>";
+
+          var dayInMs = 24*60*60*1000;
+          var ageInDays = Math.round((Date.now() - Date.parse(json[i][j].prCreated)) / dayInMs);
+          var stateWithTooltip =
+            "<div class='tooltip'>" + stateIcon[json[i][j].prState] +
+            "&#8203;<span class='tooltiptext'>Created " + ageInDays +
+            (ageInDays == 1 ? " day ago." : " days ago.") +
+            "</span>" + "</div>";
+
           listItem.innerHTML =
             "<td>" + githubNumber                      + "</td>" +
             "<td>" + reviewableBranch                  + "</td>" +
             "<td>" + titleWithTooltip                  + "</td>" +
-            "<td>" + stateIcon[json[i][j].prState]     + "</td>" +
+            "<td>" + stateWithTooltip                  + "</td>" +
             "<td>" + json[i][j].prReviewers.join(", ") + "</td>";
           prTable.appendChild(listItem);
         }
