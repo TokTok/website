@@ -1,6 +1,11 @@
 // Function depends on twemoji already having been loaded.
 function reloadPrTable() {
   var start = new Date();
+
+  var reloadButton = document.querySelector(".pr-reload");
+  var reloadButtonClass = reloadButton.className;
+  reloadButton.className += " pr-reloading";
+
   var requestHeaders = new Headers();
   var requestInit = { method: 'GET',
                       headers: requestHeaders,
@@ -83,6 +88,7 @@ function reloadPrTable() {
     }
     var repoSection = document.querySelector('.tables-wrapper');
     repoSection.replaceWith(newRepoSection);
+    reloadButton.className = reloadButtonClass;
     var end = new Date();
     var deltaTime = end.getTime() - start.getTime();
     console.log("PR table took %s seconds to load.", (deltaTime)/1000.0);

@@ -335,9 +335,11 @@ tr.packet-row:nth-child(odd) {
   width: 50px;
 
   @include circleShadow(4px);
-  background-color: #428bca;
+  background-color: #428BCA;
   border-radius: 50%;
   padding: 7px;
+
+  transition: color .5s, background-color .5s, box-shadow .5s;
 
   &:hover {
     @include circleShadow(8px);
@@ -348,10 +350,14 @@ tr.packet-row:nth-child(odd) {
     margin-left: 7px;
     color: #fff;
 
-    &:hover {
+    &:hover, &:focus {
       text-decoration: none;
     }
   }
+}
+
+.pr-reloading {
+  background-color: #BBDEFB;
 }
 
 .pr-table {
