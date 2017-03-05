@@ -1,3 +1,10 @@
+function escapeHTML(text) {
+    return text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+}
+
 // Function depends on twemoji already having been loaded.
 function reloadPrTable() {
   var start = new Date();
@@ -47,7 +54,9 @@ function reloadPrTable() {
           var reviewableBranch =
             "<a href='https://reviewable.io/reviews/toktok/" + json[i][j].prRepoName +
             "/" + json[i][j].prNumber + "'>" +
-            json[i][j].prBranch.replace(/_/g, "_<wbr>") + "</a>";
+            escapeHTML(json[i][j].prBranch).replace(/_/g, "_<wbr>") +
+            "</a>";
+
           var githubNumber =
             " <a href='https://github.com/TokTok/" + json[i][j].prRepoName +
             "/pull/" + json[i][j].prNumber + "'>" +
@@ -55,8 +64,9 @@ function reloadPrTable() {
 
           // Insert <wbr> tags after _ characters for neater word-wrapping.
           var titleWithTooltip =
-            "<div class='tooltip'>" + json[i][j].prTitle.replace(/_/g, "_<wbr>") +
-            "&#8203;<span class='tooltiptext'>" + json[i][j].prUser + "</span>" +
+            "<div class='tooltip'>" +
+            escapeHTML(json[i][j].prTitle).replace(/_/g, "_<wbr>") +
+            "&#8203;<span class='tooltiptext'>" + escapeHTML(json[i][j].prUser) + "</span>" +
             "</div>";
 
           var dayInMs = 24*60*60*1000;
@@ -73,6 +83,7 @@ function reloadPrTable() {
             "<td>" + titleWithTooltip                  + "</td>" +
             "<td>" + stateWithTooltip                  + "</td>" +
             "<td>" + json[i][j].prReviewers.join(", ") + "</td>";
+
           prTable.appendChild(listItem);
         }
         newRepoSection.appendChild(prTable);
