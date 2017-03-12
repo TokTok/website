@@ -3,6 +3,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://toktok.ltd" # the base hostname & protocol for your site
 
 # Build settings
+exclude:
+  - "*.dist"
 markdown: kramdown
 
 kramdown:
