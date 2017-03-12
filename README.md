@@ -6,7 +6,10 @@ The new website with something better than Yst (also, change the title)
 
 To work on the website you need the following things:
 
-- Jekyll and mdl via ruby gems: `gem install jekyll mdl` (mdl is optional, for linting the markdown).
+- Jekyll and mdl via ruby gems: `gem install jekyll mdl guard-livereload`.
+  You might need ruby development headers for this to work: `apt-get install ruby-dev`.
+  Also in case of trouble [this](https://github.com/jekyll/jekyll/issues/5165#issuecomment-236341627) may help (install `gem install bundler`).
+  `mdl` is optional for linting the markdown.
 - pandoc, version 1.10 or higher
   (optional for building the spec).
 
