@@ -26,15 +26,21 @@ spec: toktok/spec.md
 toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
 	cp $@.dist $@
 	cp -a hs-toxcore/res toktok/
-	! which pandoc || {				\
-		cd hs-toxcore;				\
-		pandoc					\
-			-f latex+lhs			\
-			-t native			\
-			src/tox/Network/Tox.lhs 	\
-		| grep -v '^,CodeBlock ' 		\
-		| pandoc -f native -t markdown_github	\
-		>> ../toktok/spec.md;			\
+	! which pandoc || {			\
+	  cd hs-toxcore;			\
+	  for i in `find . -name "*.lhs"`; do	\
+	    sed -i -e 's/\.lhs\}/.tex}/' $$i;	\
+	    mv $$i $${i%.lhs}.tex;		\
+	  done;					\
+	  pandoc				\
+	    -f latex+lhs			\
+	    -t native				\
+	    src/tox/Network/Tox.tex 		\
+	  | grep -v '^,CodeBlock ' 		\
+	  | pandoc -f native -t markdown_github	\
+	  >> ../toktok/spec.md;			\
+	  find . -name "*.lhs" -delete;		\
+	  git checkout .;			\
 	}
 
 .PHONY: hs-toxcore
@@ -54,7 +60,7 @@ lint:
 check:
 	mkdir -p ~/.linkchecker/
 	echo "[filtering]" > ~/.linkchecker/linkcheckerrc
-	echo "ignorewarnings=http-robots-denied" >> ~/.linkchecker/linkcheckerrc
+	echo "ignorewarnings=http-robots-denied,https-certificate-error" >> ~/.linkchecker/linkcheckerrc
 	linkchecker --ignore-url "https://toktok.ltd.*" --ignore-url "https://travis-ci.org.*" --ignore-url "irc://.*" --ignore-url "^javascript:" toktok-site
 
 upload: toktok-site
