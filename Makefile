@@ -61,7 +61,7 @@ check:
 	mkdir -p ~/.linkchecker/
 	echo "[filtering]" > ~/.linkchecker/linkcheckerrc
 	echo "ignorewarnings=http-robots-denied,https-certificate-error" >> ~/.linkchecker/linkcheckerrc
-	linkchecker --ignore-url "https://toktok.ltd.*" --ignore-url "https://travis-ci.org.*" --ignore-url "irc://.*" --ignore-url "^javascript:" toktok-site
+	linkchecker --ignore-url "https://toktok.ltd.*" --ignore-url "https://msgpack.org.*" --ignore-url "https://travis-ci.org.*" --ignore-url "irc://.*" --ignore-url "^javascript:" toktok-site
 
 upload: toktok-site
 	@test -d $(WEB_NAME) || git clone --depth=1 $(WEB_REPO)
