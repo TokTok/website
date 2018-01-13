@@ -1,12 +1,17 @@
 - name: apidsl
 - name: c-toxcore
+- name: c-toxcore-hs
 - name: dockerfiles
+- name: echobot-jvm
 - name: github-tools
 - name: hs-msgpack
 - name: hs-msgpack-rpc
+- name: hs-msgpack-types
+- name: hs-schema
 - name: hs-toxcore
 - name: hs-toxcore-c
 - name: js-toxcore-c
+- name: jtox
 - name: jvm-macros
 - name: jvm-sbt-plugins
 - name: jvm-toxcore-api
