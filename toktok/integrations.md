@@ -11,6 +11,7 @@ yourself to this page.
 
 # Desktop clients
 
+*   [CLItox](https://github.com/commandus/clitox)
 *   [Detox](https://github.com/hexafluoride/Detox)
 *   [Fltox](https://github.com/msteinbeck/fltox)
 *   [fToxTun](https://github.com/ddorian1/fToxTun)
@@ -83,6 +84,7 @@ yourself to this page.
 *   [eCamera](https://github.com/stiartsly/eCamera)
 *   [libToxTun](https://github.com/ddorian1/libToxTun)
 *   [MessageRelay](https://github.com/markwinter/MessageRelay)
+*   [P2Psocket](https://github.com/stiartsly/p2psocket)
 *   [qtToxBot](https://github.com/w3x731/qtToxBot)
 *   [Ratox](https://github.com/pranomostro/ratox)
 *   [ToxBlinkenwall](https://github.com/zoff99/ToxBlinkenwall)
@@ -93,7 +95,8 @@ yourself to this page.
 *   [ToxDoorspy](https://github.com/zoff99/ToxDoorspy)
 *   [ToxIRC](https://github.com/endoffile78/toxirc)
 *   [tox-prpl](https://github.com/jin-eld/tox-prpl)
+*   [ToxSuite](https://github.com/bignaux/ToxSuite)
 *   [ToxSync](https://github.com/MKras/ToxSync)
 *   [ToxVPN](https://github.com/cleverca22/toxvpn)
 *   [Tox-Weechat](https://github.com/haavard/tox-weechat)
-*   [Tuntox](https://github.com/jjzhang166/tuntox)
+*   [Tuntox](https://github.com/gjedeer/tuntox)
