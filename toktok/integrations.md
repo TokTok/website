@@ -12,9 +12,14 @@ yourself to this page.
 # Desktop clients
 
 *   [Detox](https://github.com/hexafluoride/Detox)
+*   [Fltox](https://github.com/msteinbeck/fltox)
+*   [fToxTun](https://github.com/ddorian1/fToxTun)
 *   [Isotoxin](https://github.com/isotoxin/isotoxin)
 *   [Konv](https://github.com/SkyzohKey/Konv)
 *   [MirandaNG](https://github.com/miranda-ng/miranda-ng)
+*   [Osmosis.jl](https://github.com/SimonDanisch/Osmosis.jl)
+    (Chat client for Julia )
+*   [Pastox](https://github.com/JX7P/Pastox)
 *   [qTox](https://github.com/qTox/qTox)
 *   [Ricin](https://github.com/RicinApp/Ricin)
 *   [Toxic](https://github.com/JFreegman/toxic)
@@ -34,6 +39,7 @@ yourself to this page.
 
 # Bots
 
+*   [CSbot](https://github.com/JFreegman/CSbot)
 *   [Echobot 1](https://github.com/alexbakker/EchoBot)
 *   [Echobot 2](https://wiki.tox.chat/developers/client_examples/echo_bot)
 *   [Echobot 3](https://github.com/toxon/ToxEcho)
@@ -73,7 +79,10 @@ yourself to this page.
 
 # Other
 
+*   [eCamera](https://github.com/stiartsly/eCamera)
 *   [libToxTun](https://github.com/ddorian1/libToxTun)
+*   [MessageRelay](https://github.com/markwinter/MessageRelay)
+*   [qtToxBot](https://github.com/w3x731/qtToxBot)
 *   [Ratox](https://github.com/pranomostro/ratox)
 *   [ToxBlinkenwall](https://github.com/zoff99/ToxBlinkenwall)
 *   [ToxBootstrapNode](https://github.com/zoff99/ToxTCP-RelayNode)
