@@ -34,7 +34,10 @@ yourself to this page.
 # Bots
 
 *   [Java echo bot](https://github.com/TokTok/echobot-jvm)
+*   [Java echo bot in pure Java](https://github.com/zoff99/java_toxclient_example)
+*   [Skupina-robot](https://github.com/zoff99/skupina-robot)
 *   [Video streaming bot](https://github.com/TokTok/streambot-jvm)
+*   [ToxBildGruppenArbeiter](https://github.com/zoff99/ToxBildGruppenArbeiter) (Video Conferencing bot for multiple Users)
 
 # Language bindings
 
@@ -44,6 +47,7 @@ yourself to this page.
 *   [Go](https://github.com/kitech/go-toxcore) go-toxcore
 *   [Go](https://github.com/xhebox/gtox) gtox
 *   [Haskell](https://github.com/TokTok/hs-toxcore-c)
+*   [pure Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
 *   [Java/Scala](https://github.com/TokTok/jvm-toxcore-c)
 *   [JavaScript](https://github.com/TokTok/js-toxcore-c)
 *   [Objective C](https://github.com/Antidote-for-Tox/objcTox)
@@ -59,8 +63,10 @@ yourself to this page.
 
 *   [Ratox](https://github.com/pranomostro/ratox)
 *   [ToxBlinkenwall](https://github.com/zoff99/ToxBlinkenwall)
+*   [ToxBootstrapNode](https://github.com/zoff99/ToxTCP-RelayNode) (run a ToxBootstrap Node in 5 Minutes)
 *   [ToxCam](https://github.com/zoff99/ToxCam)
 *   [Toxcrawler](https://github.com/JFreegman/toxcrawler)
+*   [ToxDoorspy](https://github.com/zoff99/ToxDoorspy)
 *   [ToxIRC](https://github.com/endoffile78/toxirc)
 *   [tox-prpl](https://github.com/jin-eld/tox-prpl)
 *   [ToxSync](https://github.com/MKras/ToxSync)
