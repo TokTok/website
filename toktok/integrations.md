@@ -47,7 +47,7 @@ yourself to this page.
 *   [Go](https://github.com/kitech/go-toxcore) go-toxcore
 *   [Go](https://github.com/xhebox/gtox) gtox
 *   [Haskell](https://github.com/TokTok/hs-toxcore-c)
-*   [pure Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
+*   [Pure Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
 *   [Java/Scala](https://github.com/TokTok/jvm-toxcore-c)
 *   [JavaScript](https://github.com/TokTok/js-toxcore-c)
 *   [Objective C](https://github.com/Antidote-for-Tox/objcTox)
