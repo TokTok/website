@@ -50,6 +50,7 @@ yourself to this page.
 *   [Skupina-robot](https://github.com/zoff99/skupina-robot)
 *   [ToxBildGruppenArbeiter](https://github.com/zoff99/ToxBildGruppenArbeiter)
     (Video Conferencing bot for multiple Users)
+*   [ToxBot](https://github.com/JFreegman/ToxBot)
 *   [Video streaming bot](https://github.com/TokTok/streambot-jvm)
 
 # Language bindings
