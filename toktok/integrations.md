@@ -36,7 +36,8 @@ yourself to this page.
 *   [Java echo bot](https://github.com/TokTok/echobot-jvm)
 *   [Java echo bot in pure Java](https://github.com/zoff99/java_toxclient_example)
 *   [Skupina-robot](https://github.com/zoff99/skupina-robot)
-*   [ToxBildGruppenArbeiter](https://github.com/zoff99/ToxBildGruppenArbeiter) (Video Conferencing bot for multiple Users)
+*   [ToxBildGruppenArbeiter](https://github.com/zoff99/ToxBildGruppenArbeiter)
+    (Video Conferencing bot for multiple Users)
 *   [Video streaming bot](https://github.com/TokTok/streambot-jvm)
 
 # Language bindings
@@ -63,7 +64,8 @@ yourself to this page.
 
 *   [Ratox](https://github.com/pranomostro/ratox)
 *   [ToxBlinkenwall](https://github.com/zoff99/ToxBlinkenwall)
-*   [ToxBootstrapNode](https://github.com/zoff99/ToxTCP-RelayNode) (run a ToxBootstrap Node in 5 Minutes)
+*   [ToxBootstrapNode](https://github.com/zoff99/ToxTCP-RelayNode)
+    (run a ToxBootstrap Node in 5 Minutes)
 *   [ToxCam](https://github.com/zoff99/ToxCam)
 *   [Toxcrawler](https://github.com/JFreegman/toxcrawler)
 *   [ToxDoorspy](https://github.com/zoff99/ToxDoorspy)
