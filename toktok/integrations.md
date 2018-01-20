@@ -28,11 +28,17 @@ yourself to this page.
 *   [Antidote](https://github.com/Antidote-for-Tox/Antidote) (iOS)
 *   [Antox](https://github.com/Antox/Antox) (Android)
 *   [Cyanide](https://github.com/krobelus/cyanide) (SailfishOS)
+*   [Harbour-tox](https://github.com/emmanuelduv/harbour-tox) (Sailfish on Jolla)
 *   [ToxDroid](https://github.com/suzp1984/ToxDroid) (Android)
 *   [TRIfA](https://github.com/zoff99/ToxAndroidRefImpl) (Android)
 
 # Bots
 
+*   [Echobot 1](https://github.com/alexbakker/EchoBot)
+*   [Echobot 2](https://wiki.tox.chat/developers/client_examples/echo_bot)
+*   [Echobot 3](https://github.com/toxon/ToxEcho)
+*   [Echobot 4](https://gist.github.com/nurupo/8c6c1d455b39b0830668)
+*   [Echobot 5](https://github.com/yodakohl/c-toxecho)
 *   [Java echo bot](https://github.com/TokTok/echobot-jvm)
 *   [Java echo bot in pure Java](https://github.com/zoff99/java_toxclient_example)
 *   [Skupina-robot](https://github.com/zoff99/skupina-robot)
@@ -42,6 +48,7 @@ yourself to this page.
 
 # Language bindings
 
+*   [Bash](https://github.com/mensinda/bash-toxcore)
 *   [C#](https://github.com/alexbakker/SharpTox)
 *   [Go](https://github.com/codedust/go-tox) go-tox
 *   [Go](https://github.com/josephyzhou/libtox) libtox
@@ -51,7 +58,11 @@ yourself to this page.
 *   [Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
 *   [Java/Scala](https://github.com/TokTok/jvm-toxcore-c)
 *   [JavaScript](https://github.com/TokTok/js-toxcore-c)
+*   [Julia](https://github.com/JuliaIO/Toxcore.jl)
+    (Attempt to make Toxcore accessible in Julia)
+*   [Node](https://github.com/saneki-discontinued/node-toxcore)
 *   [Objective C](https://github.com/Antidote-for-Tox/objcTox)
+*   [Objective C](https://github.com/PotcFdk/ToxController)
 *   [Pascal](https://github.com/kangreon/pascal-toxcore)
 *   [Python](https://github.com/TokTok/py-toxcore-c)
 *   [Racket](https://github.com/lehitoskin/libtoxcore-racket)
@@ -62,6 +73,7 @@ yourself to this page.
 
 # Other
 
+*   [libToxTun](https://github.com/ddorian1/libToxTun)
 *   [Ratox](https://github.com/pranomostro/ratox)
 *   [ToxBlinkenwall](https://github.com/zoff99/ToxBlinkenwall)
 *   [ToxBootstrapNode](https://github.com/zoff99/ToxTCP-RelayNode)
