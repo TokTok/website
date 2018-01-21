@@ -68,9 +68,8 @@ yourself to this page.
 *   [JavaScript](https://github.com/TokTok/js-toxcore-c)
 *   [Julia](https://github.com/JuliaIO/Toxcore.jl)
     (Attempt to make Toxcore accessible in Julia)
-*   [Node](https://github.com/saneki-discontinued/node-toxcore)
-*   [Objective C](https://github.com/Antidote-for-Tox/objcTox)
-*   [Objective C](https://github.com/PotcFdk/ToxController)
+*   [Objective C](https://github.com/Antidote-for-Tox/objcTox) objcTox
+*   [Objective C](https://github.com/PotcFdk/ToxController) ToxController
 *   [Pascal](https://github.com/kangreon/pascal-toxcore)
 *   [Python](https://github.com/TokTok/py-toxcore-c)
 *   [Racket](https://github.com/lehitoskin/libtoxcore-racket)
