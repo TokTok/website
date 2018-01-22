@@ -4,6 +4,7 @@
 - name: dockerfiles
 - name: echobot-jvm
 - name: github-tools
+- name: go-toxcore-c
 - name: hs-msgpack
 - name: hs-msgpack-rpc
 - name: hs-msgpack-types
