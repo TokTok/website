@@ -38,6 +38,10 @@ yourself to this page.
 *   [ToxDroid](https://github.com/suzp1984/ToxDroid) (Android)
 *   [TRIfA](https://github.com/zoff99/ToxAndroidRefImpl) (Android)
 
+# Hardware
+
+*   [ToxPhone](https://github.com/zoff99/ToxPhone/blob/master/README.md)
+
 # Bots
 
 *   [CSbot](https://github.com/JFreegman/CSbot)
