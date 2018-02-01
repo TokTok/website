@@ -1,7 +1,6 @@
 ---
 title: Home
 permalink: index.html
-menu_index: 1
 ---
 
 We are a **focused** effort to bring high quality privacy enhancing software
@@ -35,6 +34,14 @@ Until said peer review, Tox is not recommended for use cases that require
 proven, high-assurance security. If you find any potential security issues,
 don't hesitate to report them on the [bug
 tracker](https://github.com/TokTok/c-toxcore/issues).
+
+# Contributing
+
+Check out our [roadmap](roadmap.html) and
+[changelog](changelog/c-toxcore.html). If you want to help, you could start by
+[reviewing](reviews.html) pull requests. You can view the list of
+[repositories](repos.html) and their build status. If one of them has low
+coverage, you could familiarise yourself with the code by writing some tests.
 
 # Contact us
 

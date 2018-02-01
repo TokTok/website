@@ -1,7 +1,6 @@
 ---
 title: Repositories
 permalink: repos.html
-menu_index: 12
 ---
 
 You can file bug reports against one of the TokTok projects on GitHub. Build

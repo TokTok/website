@@ -9,6 +9,8 @@
 
   {% assign depth = page.url | append:'X' | split:'/' | size %}
   {% capture relative %}{% for i in (3..depth) %}../{% endfor %}{% endcapture %}
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ relative }}static/css/bootstrap.css" media="screen">
   <link rel="stylesheet" href="{{ relative }}static/css/main.css" media="screen">
 
   {% for script in page.js-includes %}

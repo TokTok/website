@@ -1,7 +1,6 @@
 ---
 title: Development process
 permalink: development.html
-menu_index: 9
 ---
 
 Tox and TokTok are software projects with very high security and stability
