@@ -2,7 +2,7 @@
 title: Tox specification
 permalink: spec.html
 menu_index: 3
-navicon: book
+navicon: fas fa-book
 ---
 
 -   The line below will tell kramdown to generate the ToC on this line.
