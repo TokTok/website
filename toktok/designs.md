@@ -1,7 +1,8 @@
 ---
 title: Design documents
 permalink: designs.html
-menu_index: 10
+menu_index: 4
+navicon: fas fa-file-alt
 ---
 
 This is a collection of design documents produced within the TokTok project.

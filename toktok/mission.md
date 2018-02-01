@@ -1,7 +1,8 @@
 ---
 title: Mission
 permalink: mission.html
-menu_index: 2
+menu_index: 1
+navicon: fas fa-align-left
 ---
 
 **Mission statement:** *To promote universal freedom of expression and to
