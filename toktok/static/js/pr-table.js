@@ -31,7 +31,6 @@ function escapeHTML(text) {
       .replace(/>/g, "&gt;");
 }
 
-// Function depends on twemoji already having been loaded.
 function reloadPrTable() {
   var start = new Date();
 
@@ -113,14 +112,6 @@ function reloadPrTable() {
           prTable.appendChild(listItem);
         }
         newRepoSection.appendChild(prTable);
-
-        // parse emoji in the content to ensure it gets displayed correctly in all browsers
-        twemoji.size = '16x16'; // This can be set to 16x16, 36x36, or 72x72
-        twemoji.parse(prTable, {
-            callback: function(icon, options) {
-              return relative + 'static/img/emoij/' + options.size + '/' + icon + '.png';
-            }
-        });
       }
     }
     var repoSection = document.querySelector('.tables-wrapper');
