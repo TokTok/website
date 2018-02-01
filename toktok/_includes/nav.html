@@ -1,13 +1,22 @@
-<nav id="sidemenu">
-  <div class="nav-title">Navigation</div>
-  <ul class="nav tree">
-    {% assign nav_pages = site.html_pages | sort: 'menu_index' %}
-    {% for p in nav_pages %}
-      {% if p.title and p.menu_index %}
-      <li{% if p.url == page.url %} class="current"{% endif %}>
-        <a href="{{ relative }}{{ p.url | remove_first:'/' }}">{{ p.title }}</a>
-      </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+<nav class="navbar">
+  <div class="container-fluid limit-width">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ relative }}index.html">
+        <span class="fab fa-earlybirds"></span>
+        <span class="text">TokTok</span>
+      </a>
+      <input type="checkbox" id="hambox" class="navbar-toggle collapsed">
+      <label id="hamlabel" class="navbar-toggle collapsed fas fa-bars" for="hambox"></label>
+      <div class="tinynav navbar-toggle collapsed">
+        <ul class="nav navbar-nav">
+         {% include navitems.html %}
+        </ul>
+      </div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {% include navitems.html %}
+      </ul>
+    </div>
+  </div>
 </nav>

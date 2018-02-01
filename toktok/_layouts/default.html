@@ -3,12 +3,11 @@
   {% include head.html %}
   <body>
     {% include nav.html %}
-    <div id="content">
-      <h1 class="title">{{ page.title }}</h1>
-      <main>
+    <section id="content">
+      <div class="container-fluid limit-width lead">
         {{ content }}
-      </main>
-    </div>
+      </div>
+    </section>
     {% if page.js-includes %}
     <!-- So js can load resources using relative paths. -->
     <script>const relative = "{{ relative }}";</script>
@@ -22,4 +21,5 @@
     <script src="http://localhost:35729/livereload.js"></script>
     {% endcomment %}
   </body>
+  {% include footer.html %}
 </html>

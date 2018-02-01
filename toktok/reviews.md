@@ -1,7 +1,6 @@
 ---
 title: "How to: community review"
 permalink: reviews.html
-menu_index: 11
 ---
 
 The TokTok review process requires at least three reviews for every pull

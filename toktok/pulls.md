@@ -1,7 +1,8 @@
 ---
 title: Pull Requests
 permalink: pulls.html
-menu_index: 7
+menu_index: 2
+navicon: fas fa-code-branch
 js-includes: [pr-table.js]
 ---
 

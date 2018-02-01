@@ -1,7 +1,8 @@
 ---
 title: Integrations
 permalink: integrations.html
-menu_index: 13
+menu_index: 5
+navicon: fas fa-list-ul
 ---
 
 We don't have paying customers, but here is a list of projects that use some

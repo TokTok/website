@@ -1,7 +1,6 @@
 ---
 title: Roadmap
 permalink: roadmap.html
-menu_index: 4
 ---
 
 This is a timeless roadmap for current and upcoming TokTok projects. It is
