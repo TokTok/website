@@ -1,0 +1,51 @@
+html { height: 100%; }
+body { margin: 0; height: 100%; position: relative; }
+
+#file-list {
+  float: left;
+  width: 200px;
+  height: 100%;
+  overflow-y: scroll;
+  max-height: 100vh;
+}
+
+#right {
+  margin-left: 200px;
+  right: 0;
+  height: 100%;
+}
+
+#tabs {
+  width: 99%;
+  height: 80%;
+}
+
+#tabs > div {
+  height: 100%;
+  display: inline;
+  padding: 0;
+}
+
+.firepad {
+  display: inline;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  top: 35px;
+}
+
+#tabs-list {
+  height: 25px;
+}
+
+#tabs-list li {
+  font-size: 10px;
+}
+
+#output-container {
+  width: 100%;
+  overflow: scroll;
+}
+
+.ui-tabs .ui-tabs-nav { white-space: nowrap; overflow-x: auto; }
+.ui-tabs .ui-tabs-nav li { float: none; display: inline-block; }

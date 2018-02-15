@@ -1,0 +1,16 @@
+{
+  "name": "cedar",
+  "version": "1.0.0",
+  "description": "Cedar IDE backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "ansi-to-html": "^0.6.4",
+    "firebase": "^4.9.1",
+    "firepad": "^1.4.0"
+  }
+}
