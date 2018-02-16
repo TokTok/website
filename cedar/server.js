@@ -1,57 +1,13 @@
 let initialFiles = [
-  "c-toxcore/toxcore/DHT.c",
-  "c-toxcore/toxcore/DHT.h",
-  "c-toxcore/toxcore/LAN_discovery.api.h",
-  "c-toxcore/toxcore/LAN_discovery.c",
-  "c-toxcore/toxcore/LAN_discovery.h",
-  "c-toxcore/toxcore/Messenger.c",
-  "c-toxcore/toxcore/Messenger.h",
-  "c-toxcore/toxcore/TCP_client.c",
-  "c-toxcore/toxcore/TCP_client.h",
-  "c-toxcore/toxcore/TCP_connection.c",
-  "c-toxcore/toxcore/TCP_connection.h",
-  "c-toxcore/toxcore/TCP_server.c",
-  "c-toxcore/toxcore/TCP_server.h",
-  "c-toxcore/toxcore/ccompat.h",
-  "c-toxcore/toxcore/crypto_core.api.h",
-  "c-toxcore/toxcore/crypto_core.c",
-  "c-toxcore/toxcore/crypto_core.h",
-  "c-toxcore/toxcore/crypto_core_mem.c",
-  "c-toxcore/toxcore/crypto_core_test.cpp",
-  "c-toxcore/toxcore/friend_connection.c",
-  "c-toxcore/toxcore/friend_connection.h",
-  "c-toxcore/toxcore/friend_requests.c",
-  "c-toxcore/toxcore/friend_requests.h",
-  "c-toxcore/toxcore/group.c",
-  "c-toxcore/toxcore/group.h",
-  "c-toxcore/toxcore/list.c",
-  "c-toxcore/toxcore/list.h",
-  "c-toxcore/toxcore/logger.c",
-  "c-toxcore/toxcore/logger.h",
-  "c-toxcore/toxcore/network.c",
-  "c-toxcore/toxcore/network.h",
-  "c-toxcore/toxcore/net_crypto.c",
-  "c-toxcore/toxcore/net_crypto.h",
-  "c-toxcore/toxcore/onion.c",
-  "c-toxcore/toxcore/onion.h",
-  "c-toxcore/toxcore/onion_announce.c",
-  "c-toxcore/toxcore/onion_announce.h",
-  "c-toxcore/toxcore/onion_client.c",
-  "c-toxcore/toxcore/onion_client.h",
-  "c-toxcore/toxcore/ping.api.h",
-  "c-toxcore/toxcore/ping.c",
-  "c-toxcore/toxcore/ping.h",
-  "c-toxcore/toxcore/ping_array.api.h",
-  "c-toxcore/toxcore/ping_array.c",
-  "c-toxcore/toxcore/ping_array.h",
-  "c-toxcore/toxcore/tox.api.h",
-  "c-toxcore/toxcore/tox.c",
-  "c-toxcore/toxcore/tox.h",
-  "c-toxcore/toxcore/tox_api.c",
-  "c-toxcore/toxcore/util.c",
-  "c-toxcore/toxcore/util.h",
-  "c-toxcore/toxcore/util_test.cpp",
-  "website/cedar/README.md",
+  "c-toxcore/auto_tests/friend_request_test.c",
+  "c-toxcore/auto_tests/lossy_packet_test.c",
+  "c-toxcore/auto_tests/lossless_packet_test.c",
+  "c-toxcore/auto_tests/typing_test.c",
+  "c-toxcore/auto_tests/set_name_test.c",
+  "c-toxcore/auto_tests/set_status_message_test.c",
+  "c-toxcore/auto_tests/send_message_test.c",
+  "c-toxcore/auto_tests/save_load_test.c",
+  "c-toxcore/auto_tests/helpers.h",
 ];
 
 // https://github.com/firebase/firepad/issues/251
@@ -61,8 +17,9 @@ global.window = {};
 // Cedar IDE = Coder IDE, with vowels shifted.
 const USER_ID = "cedar-server";
 const ROOT_DIR = process.env.HOME + "/code/toktok-stack";
-const SAVE_TIMEOUT = 5 * 1000;        // Save after 5 seconds inactivity.
-const FORMAT_TIMEOUT = 5 * 60 * 1000; // Format after 5 minutes inactivity.
+const QUEUED_BUILD_TIMEOUT = 3 * 1000; // Rebuild 3 seconds after last build.
+const SAVE_TIMEOUT = 5 * 1000;         // Save after 5 seconds inactivity.
+const FORMAT_TIMEOUT = 5 * 60 * 1000;  // Format after 5 minutes inactivity.
 
 let ansi_to_html = require('ansi-to-html');
 let firepad = require('firepad');
@@ -105,16 +62,31 @@ function getFileRef(file) {
 
 let ansi = new ansi_to_html();
 var buildRunning = false;
+var buildQueued = false;
 function runBuild() {
-  if (buildRunning) {
+  if (buildRunning || buildQueued) {
     console.log("build already running; not starting another one");
+    buildQueued = true;
     return;
   }
   console.log("starting a new build");
+  buildQueued = false;
   buildRunning = true;
-  let bazel = child_process.spawn("bazel", [ "build", "//c-toxcore/..." ], {
-    cwd : ROOT_DIR,
-  });
+  // let bazel = child_process.spawn("bazel", [ "build", "//c-toxcore/..." ], {
+  let bazel = child_process.spawn("bazel",
+                                  [
+                                    "test",
+                                    "//c-toxcore/auto_tests:lossless_packet_test",
+                                    "//c-toxcore/auto_tests:lossy_packet_test",
+                                    "//c-toxcore/auto_tests:set_name_test",
+                                    "//c-toxcore/auto_tests:set_status_message_test",
+                                    "//c-toxcore/auto_tests:save_load_test",
+                                    "//c-toxcore/auto_tests:typing_test",
+                                    "--config=asan", "--test_output=streamed"
+                                  ],
+                                  {
+                                    cwd : ROOT_DIR,
+                                  });
 
   let output = firebase.database().ref("bazel_out");
   var bazelLog = "";
@@ -127,7 +99,15 @@ function runBuild() {
   bazel.stdout.on('data', updateLog);
   bazel.stderr.setEncoding('utf8');
   bazel.stderr.on('data', updateLog);
-  bazel.on('exit', () => buildRunning = false);
+  bazel.on('exit', () => {
+    buildRunning = false;
+    if (buildQueued) {
+      setTimeout(() => {
+        buildQueued = false;
+        runBuild();
+      }, QUEUED_BUILD_TIMEOUT);
+    }
+  });
 }
 
 function formatCode(path, pad, contents) {

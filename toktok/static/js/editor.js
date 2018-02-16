@@ -1,7 +1,3 @@
-let initialFiles = [
-  "website/cedar/README.md",
-];
-
 let icons = {
   file :
       "https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/List.png",
@@ -77,6 +73,8 @@ function loadFile(path) {
       foldGutter : true,
       gutters : [ "CodeMirror-linenumbers", "CodeMirror-foldgutter" ],
       autoCloseBrackets : true,
+      continueComments : true,
+      rulers : [ {column : 80} ],
       lineNumbers : true,
       lineWrapping : false,
       matchBrackets : true,
@@ -145,9 +143,8 @@ $(() => {
   });
 
   // Global CodeMirror settings.
-  CodeMirror.commands.autocomplete = cm => {
-    cm.showHint({hint : CodeMirror.hint.anyword});
-  };
+  CodeMirror.commands.autocomplete =
+      cm => { cm.showHint({hint : CodeMirror.hint.anyword}); };
 
   // Initialise the navigation tabs at the top.
   let tabs = $("#tabs").tabs();
@@ -167,8 +164,6 @@ $(() => {
     }
   });
 
-  initialFiles.forEach(loadFile);
-
   window.addEventListener("hashchange", event => {
     openFile(demangle(window.location.hash.slice(1)));
   });
@@ -176,7 +171,7 @@ $(() => {
   if (window.location.hash !== "") {
     openFile(demangle(window.location.hash.slice(1)));
   } else {
-    openFile("README.md");
+    openFile("website/cedar/README.md");
   }
 
   $(window).keydown(event => {
