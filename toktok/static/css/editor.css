@@ -4,9 +4,10 @@ body { margin: 0; height: 100%; position: relative; }
 #file-list {
   float: left;
   width: 200px;
-  height: 100%;
   overflow-y: scroll;
   max-height: 100vh;
+  font-family: "Roboto Mono", "DejaVu Sans Mono", monospace;
+  font-size: small;
 }
 
 #right {
@@ -42,6 +43,12 @@ body { margin: 0; height: 100%; position: relative; }
   font-size: 10px;
 }
 
+#tabs-list li .ui-icon-close {
+  padding: 0;
+  margin-right: -5px;
+  cursor: pointer;
+}
+
 #output-container {
   width: 100%;
   overflow: scroll;
@@ -49,3 +56,17 @@ body { margin: 0; height: 100%; position: relative; }
 
 .ui-tabs .ui-tabs-nav { white-space: nowrap; overflow-x: auto; }
 .ui-tabs .ui-tabs-nav li { float: none; display: inline-block; }
+
+.cm-trailingspace {
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUXCToH00Y1UgAAACFJREFUCNdjPMDBUc/AwNDAAAFMTAwMDA0OP34wQgX/AQBYgwYEx4f9lQAAAABJRU5ErkJggg==);
+   background-position: bottom left;
+   background-repeat: repeat-x;
+}
+
+.CodeMirror-focused .cm-matchhighlight {
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFklEQVQI12NgYGBgkKzc8x9CMDAwAAAmhwSbidEoSQAAAABJRU5ErkJggg==);
+   background-position: bottom;
+   background-repeat: repeat-x;
+}
+
+.cm-matchhighlight {background-color: lightgreen}

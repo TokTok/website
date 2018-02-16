@@ -60,7 +60,7 @@ lint:
 check:
 	mkdir -p ~/.linkchecker/
 	echo "[filtering]" > ~/.linkchecker/linkcheckerrc
-	echo "ignorewarnings=http-robots-denied,https-certificate-error" >> ~/.linkchecker/linkcheckerrc
+	echo "ignorewarnings=ignore-url,http-robots-denied,https-certificate-error" >> ~/.linkchecker/linkcheckerrc
 	linkchecker --ignore-url "https://toktok.ltd.*" --ignore-url "https://msgpack.org.*" --ignore-url "https://travis-ci.org.*" --ignore-url "irc://.*" --ignore-url "^javascript:" toktok-site
 
 upload: toktok-site

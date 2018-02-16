@@ -1,9 +1,5 @@
 let initialFiles = [
-  "README.md",
-  "c-toxcore/toxcore/group.c",
-  "c-toxcore/toxcore/group.h",
-  "c-toxcore/toxcore/tox.c",
-  "c-toxcore/toxcore/tox.h",
+  "website/cedar/README.md",
 ];
 
 let icons = {
@@ -11,6 +7,9 @@ let icons = {
       "https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/List.png",
   dir : null
 };
+
+let pads = {};
+let cms = {};
 
 function makeJsTree(parents, data) {
   return Object.entries(data)
@@ -59,8 +58,8 @@ function detectMode(path) {
 
 function loadFile(path) {
   let ref = getRef(path);
-  let codeId = 'code:' + ref.key;
-  let linkId = 'ref:' + codeId;
+  let codeId = 'code-' + ref.key;
+  let linkId = 'ref-' + codeId;
 
   let container = document.getElementById(codeId);
   if (container) {
@@ -69,22 +68,34 @@ function loadFile(path) {
     $('#tabs').append("<div id='" + codeId + "' data-key='" + ref.key +
                       "'></div>");
     $('#tabs-list')
-        .append("<li><a id='" + linkId + "' href='#" + codeId + "'>" + path +
-                "</a></li>");
+        .append(
+            "<li><a id='" + linkId + "' href='#" + codeId + "'>" + path +
+            "<span class='ui-icon ui-icon-close' role='presentation'>Close</span>" +
+            "</a></li>");
 
-    Firepad.fromCodeMirror(ref, CodeMirror(document.getElementById(codeId), {
-                             lineNumbers : true,
-                             lineWrapping : false,
-                             matchBrackets : true,
-                             indentUnit : 4,
-                             mode : detectMode(path)
-                           }));
+    cms[ref.key] = CodeMirror(document.getElementById(codeId), {
+      foldGutter : true,
+      gutters : [ "CodeMirror-linenumbers", "CodeMirror-foldgutter" ],
+      autoCloseBrackets : true,
+      lineNumbers : true,
+      lineWrapping : false,
+      matchBrackets : true,
+      showTrailingSpace : true,
+      highlightSelectionMatches : true,
+      indentUnit : 4,
+      inputStyle : "contenteditable",
+      extraKeys : {"Ctrl-Space" : "autocomplete"},
+      mode : detectMode(path)
+    });
+    pads[codeId] = Firepad.fromCodeMirror(ref, cms[ref.key]);
 
     console.log("Created new element:", codeId);
     $("#tabs").tabs("refresh");
     $("#tabs").tabs({
       activate : (event, ui) => {
-        window.location.hash = '#' + ui.newPanel.attr('data-key');
+        let key = ui.newPanel.attr('data-key');
+        window.location.hash = '#' + key;
+        cms[key].refresh();
       }
     });
   }
@@ -97,7 +108,7 @@ function openFile(path) {
   document.getElementById(linkId).click();
 }
 
-$(function() {
+$(() => {
   // Set up firebase connection.
   firebase.initializeApp({
     apiKey : "AIzaSyC_JdByNm-E1CAJUkePsr-YJZl7W77oL3g",
@@ -133,11 +144,25 @@ $(function() {
     }
   });
 
+  // Global CodeMirror settings.
+  CodeMirror.commands.autocomplete = cm => {
+    cm.showHint({hint : CodeMirror.hint.anyword});
+  };
+
   // Initialise the navigation tabs at the top.
-  $("#tabs").tabs();
+  let tabs = $("#tabs").tabs();
+  // Close icon: removing the tab on click
+  tabs.on("click", "span.ui-icon-close", function() {
+    var panelId = $(this).closest("li").remove().attr("aria-controls");
+    console.log("removing tab:", panelId);
+    $("#" + panelId).remove();
+    pads[panelId].dispose();
+    delete pads[panelId];
+    tabs.tabs("refresh");
+  });
 
   $('#file-list').on('changed.jstree', (e, data) => {
-    if (data.node && data.node.original.children !== 0) {
+    if (data.node && data.node.children.length === 0) {
       openFile(data.node.original.path);
     }
   });
@@ -153,4 +178,11 @@ $(function() {
   } else {
     openFile("README.md");
   }
+
+  $(window).keydown(event => {
+    if (event.ctrlKey && event.keyCode == 87) {
+      $('.ui-tab.ui-state-active .ui-icon-close').click();
+      event.preventDefault();
+    }
+  });
 });

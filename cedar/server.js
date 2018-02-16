@@ -1,3 +1,59 @@
+let initialFiles = [
+  "c-toxcore/toxcore/DHT.c",
+  "c-toxcore/toxcore/DHT.h",
+  "c-toxcore/toxcore/LAN_discovery.api.h",
+  "c-toxcore/toxcore/LAN_discovery.c",
+  "c-toxcore/toxcore/LAN_discovery.h",
+  "c-toxcore/toxcore/Messenger.c",
+  "c-toxcore/toxcore/Messenger.h",
+  "c-toxcore/toxcore/TCP_client.c",
+  "c-toxcore/toxcore/TCP_client.h",
+  "c-toxcore/toxcore/TCP_connection.c",
+  "c-toxcore/toxcore/TCP_connection.h",
+  "c-toxcore/toxcore/TCP_server.c",
+  "c-toxcore/toxcore/TCP_server.h",
+  "c-toxcore/toxcore/ccompat.h",
+  "c-toxcore/toxcore/crypto_core.api.h",
+  "c-toxcore/toxcore/crypto_core.c",
+  "c-toxcore/toxcore/crypto_core.h",
+  "c-toxcore/toxcore/crypto_core_mem.c",
+  "c-toxcore/toxcore/crypto_core_test.cpp",
+  "c-toxcore/toxcore/friend_connection.c",
+  "c-toxcore/toxcore/friend_connection.h",
+  "c-toxcore/toxcore/friend_requests.c",
+  "c-toxcore/toxcore/friend_requests.h",
+  "c-toxcore/toxcore/group.c",
+  "c-toxcore/toxcore/group.h",
+  "c-toxcore/toxcore/list.c",
+  "c-toxcore/toxcore/list.h",
+  "c-toxcore/toxcore/logger.c",
+  "c-toxcore/toxcore/logger.h",
+  "c-toxcore/toxcore/network.c",
+  "c-toxcore/toxcore/network.h",
+  "c-toxcore/toxcore/net_crypto.c",
+  "c-toxcore/toxcore/net_crypto.h",
+  "c-toxcore/toxcore/onion.c",
+  "c-toxcore/toxcore/onion.h",
+  "c-toxcore/toxcore/onion_announce.c",
+  "c-toxcore/toxcore/onion_announce.h",
+  "c-toxcore/toxcore/onion_client.c",
+  "c-toxcore/toxcore/onion_client.h",
+  "c-toxcore/toxcore/ping.api.h",
+  "c-toxcore/toxcore/ping.c",
+  "c-toxcore/toxcore/ping.h",
+  "c-toxcore/toxcore/ping_array.api.h",
+  "c-toxcore/toxcore/ping_array.c",
+  "c-toxcore/toxcore/ping_array.h",
+  "c-toxcore/toxcore/tox.api.h",
+  "c-toxcore/toxcore/tox.c",
+  "c-toxcore/toxcore/tox.h",
+  "c-toxcore/toxcore/tox_api.c",
+  "c-toxcore/toxcore/util.c",
+  "c-toxcore/toxcore/util.h",
+  "c-toxcore/toxcore/util_test.cpp",
+  "website/cedar/README.md",
+];
+
 // https://github.com/firebase/firepad/issues/251
 global.window = {};
 
@@ -5,6 +61,8 @@ global.window = {};
 // Cedar IDE = Coder IDE, with vowels shifted.
 const USER_ID = "cedar-server";
 const ROOT_DIR = process.env.HOME + "/code/toktok-stack";
+const SAVE_TIMEOUT = 5 * 1000;        // Save after 5 seconds inactivity.
+const FORMAT_TIMEOUT = 5 * 60 * 1000; // Format after 5 minutes inactivity.
 
 let ansi_to_html = require('ansi-to-html');
 let firepad = require('firepad');
@@ -32,6 +90,7 @@ function execLines(cmd, args) {
 
 firebase.database()
     .ref("file_list")
+    // "git ls-files --recurse-submodules" doesn't always work.
     .set(execLines("git", [
            "submodule", "foreach", '--quiet',
            'git ls-files | sed -e "s|^|$PWD/|;s|' + ROOT_DIR + '/||"'
@@ -44,14 +103,6 @@ function getFileRef(file) {
   return firebase.database().ref(mangled);
 }
 
-let initialFiles = [
-  "README.md",
-  "c-toxcore/toxcore/group.c",
-  "c-toxcore/toxcore/group.h",
-  "c-toxcore/toxcore/tox.c",
-  "c-toxcore/toxcore/tox.h",
-];
-
 let ansi = new ansi_to_html();
 var buildRunning = false;
 function runBuild() {
@@ -61,7 +112,7 @@ function runBuild() {
   }
   console.log("starting a new build");
   buildRunning = true;
-  let bazel = child_process.spawn("bazel", [ "build", "//..." ], {
+  let bazel = child_process.spawn("bazel", [ "build", "//c-toxcore/..." ], {
     cwd : ROOT_DIR,
   });
 
@@ -79,9 +130,28 @@ function runBuild() {
   bazel.on('exit', () => buildRunning = false);
 }
 
+function formatCode(path, pad, contents) {
+  if (path.endsWith(".c") || path.endsWith(".h") || path.endsWith(".cpp")) {
+    try {
+      pad.setText(child_process.execFileSync(
+          "astyle",
+          [
+            "-n", "--options=" + ROOT_DIR + "/c-toxcore/other/astyle/astylerc"
+          ],
+          {
+            input : contents,
+            encoding : 'utf8',
+          }));
+    } catch (e) {
+      console.log("could not format text:", e);
+    }
+  }
+}
+
 function setupSave(path, ref, pad) {
   var lastUpdate = 0;
   var saveTimer = null;
+  var formatTimer = null;
 
   ref.on('value', snapshot => {
     let update =
@@ -99,7 +169,7 @@ function setupSave(path, ref, pad) {
       console.log("fetching data for", path);
       pad.getText(contents => {
         console.log("writing", contents.length, "bytes to", path);
-        fs.writeFile("../../" + path, contents, err => {
+        fs.writeFile(ROOT_DIR + "/" + path, contents, err => {
           if (err) {
             console.log("error", err, "while writing", path);
           } else {
@@ -108,7 +178,15 @@ function setupSave(path, ref, pad) {
           }
         });
       });
-    }, 5000);
+    }, SAVE_TIMEOUT);
+
+    if (formatTimer !== null) {
+      clearTimeout(formatTimer);
+    }
+    formatTimer = setTimeout(() => {
+      console.log("formatting", path);
+      pad.getText(contents => { formatCode(path, pad, contents); });
+    }, FORMAT_TIMEOUT);
   });
 }
 
@@ -117,7 +195,7 @@ initialFiles.forEach(path => {
   let pad = new firepad.Headless(ref);
   pad.firebaseAdapter_.setUserId(USER_ID);
 
-  fs.readFile("../../" + path, "utf8", (err, contents) => {
+  fs.readFile(ROOT_DIR + "/" + path, "utf8", (err, contents) => {
     pad.setText(contents, (err, committed) => {
       if (err) {
         console.log("error", err, "while loading", path);
