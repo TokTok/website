@@ -6,8 +6,8 @@ body { margin: 0; height: 100%; position: relative; }
   width: 200px;
   overflow-y: scroll;
   max-height: 100vh;
-  font-family: "Roboto Mono", "DejaVu Sans Mono", monospace;
-  font-size: small;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 13px;
 }
 
 #right {
