@@ -1,6 +1,7 @@
 - name: apidsl
 - name: c-toxcore
 - name: c-toxcore-hs
+- name: cedar
 - name: dockerfiles
 - name: echobot-jvm
 - name: github-tools
