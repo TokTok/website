@@ -68,7 +68,7 @@ yourself to this page.
 *   [C#](https://github.com/alexbakker/SharpTox)
 *   [Go](https://github.com/codedust/go-tox) go-tox
 *   [Go](https://github.com/josephyzhou/libtox) libtox
-*   [Go](https://github.com/kitech/go-toxcore) go-toxcore
+*   [Go](https://github.com/TokTok/go-toxcore-c) go-toxcore
 *   [Go](https://github.com/xhebox/gtox) gtox
 *   [Haskell](https://github.com/TokTok/hs-toxcore-c)
 *   [Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
@@ -84,7 +84,7 @@ yourself to this page.
 *   [Ruby](https://github.com/toxon/tox.rb)
 *   [Rust](https://github.com/quininer/tox-rs) tox-rs
 *   [Rust](https://github.com/suhr/rstox) rstox
-*   [Vala](https://github.com/RicinApp/tox-vapi)
+*   [Vala](https://github.com/naxuroqa/vala-toxcore-c)
 
 # Other
 
