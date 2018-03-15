@@ -34,13 +34,13 @@ Finding specific bugs or regressions is currently difficult. The tests were
 also written by the same person who wrote the tested code. This tends to lead
 to implementation-guided tests, which easily omits some corner cases.
 
-Testing new implementations such as [Zetox](https://github.com/zetok/tox) and
-[HsTox](https://github.com/TokTok/hs-toxcore) involves implementing networking
-and having it communicate with an existing Tox node running the C reference
-implementation. Doing automated tests of this kind is costly, as it requires
-running a Tox node and establishing a connection to it.  These tests are also
-necessarily stateful and non-deterministic, because they run in a Tox network.
-Hermetic tests are therefore difficult to achieve.
+Testing new implementations such as [tox-rs/tox](https://github.com/tox-rs/tox)
+and [HsTox](https://github.com/TokTok/hs-toxcore) involves implementing
+networking and having it communicate with an existing Tox node running the C
+reference implementation. Doing automated tests of this kind is costly, as it
+requires running a Tox node and establishing a connection to it.  These tests
+are also necessarily stateful and non-deterministic, because they run in a
+Tox network. Hermetic tests are therefore difficult to achieve.
 
 # Requirements
 

@@ -24,7 +24,7 @@ Our current focus is:
     build new releases with mostly cleanups, minor bugfixes, and small
     non-intrusive features.
 
-A new implementation in Rust is [in progress](https://github.com/zetok/tox).
+A new implementation in Rust is [in progress](https://github.com/tox-rs/tox).
 It evolves together with the model and is tested against the specification.
 
 Neither the Tox protocol nor the implementation have undergone peer review,
