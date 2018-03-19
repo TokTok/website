@@ -42,7 +42,8 @@ yourself to this page.
 
 # Hardware
 
-*   [ToxPhone](https://github.com/zoff99/ToxPhone/blob/master/README.md)
+*   [ToxPhone](https://github.com/zoff99/ToxPhone/blob/master/README.md) (with Video)
+*   [ToxPhone](https://hackaday.io/project/9046-toxphone) (with PyTox)
 
 # Bots
 
