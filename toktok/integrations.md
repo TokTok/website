@@ -75,6 +75,8 @@ yourself to this page.
 *   [Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
 *   [Java/Scala](https://github.com/TokTok/jvm-toxcore-c)
 *   [JavaScript](https://github.com/TokTok/js-toxcore-c)
+*   [Node.js](https://github.com/w3x731/NodeTox)
+    (Node.js [addon](https://nodejs.org/api/addons.html#addons_c_addons))
 *   [Julia](https://github.com/JuliaIO/Toxcore.jl)
     (Attempt to make Toxcore accessible in Julia)
 *   [Objective C](https://github.com/Antidote-for-Tox/objcTox) objcTox
@@ -94,8 +96,6 @@ yourself to this page.
 *   [MessageRelay](https://github.com/markwinter/MessageRelay)
 *   [P2Psocket](https://github.com/stiartsly/p2psocket)
 *   [qtToxBot](https://github.com/w3x731/qtToxBot)
-*   [NodeTox](https://github.com/w3x731/NodeTox)
-    (Node.js [addon](https://nodejs.org/api/addons.html#addons_c_addons))
 *   [Ratox](https://github.com/pranomostro/ratox)
 *   [ToxBlinkenwall](https://github.com/zoff99/ToxBlinkenwall)
 *   [ToxBootstrapNode](https://github.com/zoff99/ToxTCP-RelayNode)
