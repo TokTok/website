@@ -25,6 +25,107 @@ a {
 	border-radius: 0;
 }
 
+table {
+  width: 100%;
+  display: table;
+  border-spacing: 0;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+table * {
+  font-family: sans-serif;
+}
+
+table a {
+  color: blue;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+table a:hover {
+  font-weight: bold;
+}
+
+table th {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+table td {
+  padding: 8px 12px;
+  font-size: 14px;
+  /*border-bottom: 1px solid #ccc;*/
+}
+table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+table tr:nth-child(odd) {
+  background-color: rgba(0,0,0,.04);
+}
+
+/* ID */
+.pr-table th:nth-child(1),
+.pr-table td:nth-child(1) {
+  width: 6%;
+}
+
+/* branch_name */
+.pr-table th:nth-child(2),
+.pr-table td:nth-child(2) {
+  width: 19%;
+  max-width: 19%;
+}
+
+
+/* title */
+.pr-table th:nth-child(3),
+.pr-table td:nth-child(3) {
+  width: 50%;
+  max-width: 50%;
+}
+
+/* state */
+.pr-table th:nth-child(4),
+.pr-table td:nth-child(4) {
+  width: 10%;
+  max-width: 10%;
+}
+
+/* title */
+.pr-table th:nth-child(5),
+.pr-table td:nth-child(5) {
+  width: 15%;
+  max-width: 15%;
+}
+
+.pr-table .tooltip {
+  opacity: 1;
+  font-size: 14px;
+  position: relative;
+}
+.pr-table .tooltiptext {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  z-index: 99999;
+}
+
+.pr-table .tooltip:hover {
+  width: auto;
+}
+.pr-table .tooltip:hover .tooltiptext {
+  display: block;
+  width: 160px;
+}
+
 @media (min-width: 768px) {
 	.navbar {
 		height: 70px;
