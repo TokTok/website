@@ -32,6 +32,7 @@ yourself to this page.
 *   [Toxy](https://github.com/alexbakker/Toxy)
 *   [Toxzilla](https://github.com/toxzilla/app)
 *   [uTox](https://github.com/uTox/uTox)
+*   [Venom](https://github.com/naxuroqa/Venom)
 
 # Mobile clients
 
