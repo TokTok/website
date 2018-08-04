@@ -71,7 +71,6 @@ yourself to this page.
 *   [Bash](https://github.com/mensinda/bash-toxcore)
 *   [C#](https://github.com/alexbakker/SharpTox)
 *   [Go](https://github.com/codedust/go-tox) go-tox
-*   [Go](https://github.com/josephyzhou/libtox) libtox
 *   [Go](https://github.com/TokTok/go-toxcore-c) go-toxcore
 *   [Go](https://github.com/xhebox/gtox) gtox
 *   [Haskell](https://github.com/TokTok/hs-toxcore-c)
