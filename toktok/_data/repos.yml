@@ -4,12 +4,13 @@
 - name: cedar
 - name: dockerfiles
 - name: echobot-jvm
-- name: github-tools
 - name: go-toxcore-c
+- name: hs-github-tools
 - name: hs-msgpack
 - name: hs-msgpack-rpc
 - name: hs-msgpack-types
 - name: hs-schema
+- name: hs-tokstyle
 - name: hs-toxcore
 - name: hs-toxcore-c
 - name: js-toxcore-c
@@ -23,7 +24,6 @@
 - name: semdoc
 - name: spec
 - name: streambot-jvm
-- name: tokstyle
 - name: toktok-android
 - name: toktok-stack
 - name: toktok.github.io
