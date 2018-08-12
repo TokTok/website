@@ -21,7 +21,6 @@
 - name: jvm-toxcore-c
 - name: py-toxcore-c
 - name: qTox
-- name: semdoc
 - name: spec
 - name: streambot-jvm
 - name: toktok-android
