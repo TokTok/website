@@ -11,6 +11,7 @@
 - name: hs-msgpack-types
 - name: hs-schema
 - name: hs-tokstyle
+- name: hs-tools
 - name: hs-toxcore
 - name: hs-toxcore-c
 - name: js-toxcore-c
