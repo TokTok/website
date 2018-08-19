@@ -2,10 +2,10 @@
 // from: https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/replaceWith()/replaceWith().md
 (function (arr) {
   arr.forEach(function (item) {
-    if (item.hasOwnProperty('replaceWith')) {
+    if (item.hasOwnProperty("replaceWith")) {
       return;
     }
-    Object.defineProperty(item, 'replaceWith', {
+    Object.defineProperty(item, "replaceWith", {
       configurable: true,
       enumerable: true,
       writable: true,
@@ -39,35 +39,35 @@ function reloadPrTable() {
   reloadButton.className += " pr-reloading";
 
   var requestHeaders = new Headers();
-  var requestInit = { method: 'GET',
+  var requestInit = { method: "GET",
                       headers: requestHeaders,
-                      mode: 'cors',
-                      cache: 'default' };
+                      mode: "cors",
+                      cache: "default" };
 
   var stateIcon = {
-    clean: '&#x2705;',
-    behind: '&#x1f4a4;',
-    blocked: '&#x1f6a7;',
-    dirty: '&#x274c;',
-    unknown: '&#x231b;',
-    unstable: '&#x1f6a7;',
+    clean: "&#x2705;",
+    behind: "&#x1f4a4;",
+    blocked: "&#x1f6a7;",
+    dirty: "&#x274c;",
+    unknown: "&#x231b;",
+    unstable: "&#x1f6a7;",
   };
 
-  fetch('https://git-critique.herokuapp.com/hello/pulls', requestInit)
+  fetch("https://git-critique.herokuapp.com/hello/pulls", requestInit)
   .then(function(response) { return response.json(); })
   .then(function(json) {
-    var newRepoSection = document.createElement('div');
+    var newRepoSection = document.createElement("div");
     newRepoSection.className = "tables-wrapper"
 
     for (var i = 0; i < json.length; i++) {
       if (json[i].length > 0) {
-        var repoTitle = document.createElement('h2');
+        var repoTitle = document.createElement("h2");
         repoTitle.innerHTML = json[i][0].prRepoName;
         newRepoSection.appendChild(repoTitle);
 
-        var prTable = document.createElement('table');
+        var prTable = document.createElement("table");
         prTable.className = "pr-table"
-        var prHeaders = document.createElement('tr');
+        var prHeaders = document.createElement("tr");
         prHeaders.innerHTML =
           "<th>" + "#"         + "</th>" +
           "<th>" + "Branch"    + "</th>" +
@@ -77,7 +77,7 @@ function reloadPrTable() {
         prTable.appendChild(prHeaders);
 
         for (var j = 0; j < json[i].length; j++) {
-          var listItem = document.createElement('tr');
+          var listItem = document.createElement("tr");
           var reviewableBranch =
             "<a href='https://reviewable.io/reviews/toktok/" + json[i][j].prRepoName +
             "/" + json[i][j].prNumber + "'>" +
@@ -116,7 +116,7 @@ function reloadPrTable() {
         newRepoSection.appendChild(prTable);
       }
     }
-    var repoSection = document.querySelector('.tables-wrapper');
+    var repoSection = document.querySelector(".tables-wrapper");
     repoSection.replaceWith(newRepoSection);
     reloadButton.className = reloadButtonClass;
     var end = new Date();
