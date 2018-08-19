@@ -46,6 +46,8 @@ function reloadPrTable() {
 
   var stateIcon = {
     clean: '&#x2705;',
+    behind: '&#x1f4a4;',
+    blocked: '&#x1f6a7;',
     dirty: '&#x274c;',
     unknown: '&#x231b;',
     unstable: '&#x1f6a7;',
