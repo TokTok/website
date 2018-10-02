@@ -10,29 +10,35 @@ Click on a PR number (the # column) to see the pull request on GitHub. Click
 on the branch to enter Reviewable.io and do a code review.
 
 <table>
-    <tr><th colspan="2">Icon legend</th></tr>
+    <tr><th colspan="3">Icon legend</th></tr>
     <tr>
       <td>clean</td>
+      <td>can be merged</td>
       <td>&#x2705;</td>
     </tr>
     <tr>
       <td>behind</td>
+      <td>rebase needed</td>
       <td>&#x1f4a4;</td>
     </tr>
     <tr>
       <td>blocked</td>
+      <td>blocking status check failure</td>
       <td>&#x1f6a7;</td>
     </tr>
     <tr>
       <td>dirty</td>
+      <td>merge conflict</td>
       <td>&#x274c;</td>
     </tr>
     <tr>
       <td>unknown</td>
+      <td>mergeability not yet checked</td>
       <td>&#x231b;</td>
     </tr>
     <tr>
       <td>unstable</td>
+      <td>non-blocking status check failure</td>
       <td>&#x1f6a7;</td>
     </tr>
 </table>
