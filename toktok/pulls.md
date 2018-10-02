@@ -9,6 +9,34 @@ js-includes: [pr-table.js]
 Click on a PR number (the # column) to see the pull request on GitHub. Click
 on the branch to enter Reviewable.io and do a code review.
 
+<table>
+    <tr><th colspan="2">Icon legend</th></tr>
+    <tr>
+      <td>clean</td>
+      <td>&#x2705;</td>
+    </tr>
+    <tr>
+      <td>behind</td>
+      <td>&#x1f4a4;</td>
+    </tr>
+    <tr>
+      <td>blocked</td>
+      <td>&#x1f6a7;</td>
+    </tr>
+    <tr>
+      <td>dirty</td>
+      <td>&#x274c;</td>
+    </tr>
+    <tr>
+      <td>unknown</td>
+      <td>&#x231b;</td>
+    </tr>
+    <tr>
+      <td>unstable</td>
+      <td>&#x1f6a7;</td>
+    </tr>
+</table>
+
 <div>
   <p>Loading Pull requests...</p>
   <noscript>
@@ -23,17 +51,11 @@ on the branch to enter Reviewable.io and do a code review.
 </div>
 {: .tables-wrapper}
 
-<div></div>
-{: .pr-padding}
-
 <div>
   <a href="javascript:reloadPrTable()">&#8634;</a>
 </div>
 {: .pr-reload}
 
 {% comment %}
-  .pr-padding is to ensure that the reload button doesn't cover anything when
-  you've scrolled to the bottom of the page.
-
   .pr-reload is the reload button. &#8634; is a reload symbol.
 {% endcomment %}
