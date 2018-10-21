@@ -36,17 +36,17 @@ This website and other infrastructure such as wiki, blog, etc. are maintained
 by some of the long-time contributors of Tox. If you have a legal question,
 or if you notice something is wrong with tox.chat servers, or you find an
 outdated information on the one of tox.chat websites -- you can send an
-email to our [distribution list](leadership@tox.chat). Please note that this
+email to our [distribution list](mailto:leadership@tox.chat). Please note that this
 list is not the right place to ask for general user support. All such
 emails would simply be ignored. Please use our [mailing lists](https://lists.tox.chat/listinfo)
 or the [Reddit forums](https://www.reddit.com/r/projecttox/) for general user support.
 
 For the reference, here is the list of the said long-time Tox contributors running the infrastructure:
 
-*   [Impyy](impyy@tox.chat)
-*   [irungentoo](irungentoo@tox.chat)
-*   [Jfreegman](JFreegman@tox.chat)
-*   [mannol](mannol@tox.chat)
-*   [nurupo](nurupo@tox.chat)
-*   [oranges](oranges@tox.chat)
-*   [stal](stal@tox.chat)
+*   [Impyy](mailto:impyy@tox.chat)
+*   [irungentoo](mailto:irungentoo@tox.chat)
+*   [Jfreegman](mailto:JFreegman@tox.chat)
+*   [mannol](mailto:mannol@tox.chat)
+*   [nurupo](mailto:nurupo@tox.chat)
+*   [oranges](mailto:oranges@tox.chat)
+*   [stal](mailto:stal@tox.chat)

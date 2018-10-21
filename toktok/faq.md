@@ -10,5 +10,5 @@ navicon: fas fa-info-circle
 The most common questions we get are answered here. If you have a
 question for us that you think should appear in this list that doesn't,
 send an email to the support mailing list with your
-suggestion: [support@lists.tox.chat](support@lists.tox.chat)
+suggestion: [support@lists.tox.chat](mailto:support@lists.tox.chat)
 
