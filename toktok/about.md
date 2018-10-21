@@ -38,10 +38,12 @@ or if you notice something is wrong with tox.chat servers, or you find an
 outdated information on the one of tox.chat websites -- you can send an
 email to our [distribution list](mailto:leadership@tox.chat). Please note that this
 list is not the right place to ask for general user support. All such
-emails would simply be ignored. Please use our [mailing lists](https://lists.tox.chat/listinfo)
+emails would simply be ignored. Please use
+our [mailing lists](https://lists.tox.chat/listinfo)
 or the [Reddit forums](https://www.reddit.com/r/projecttox/) for general user support.
 
-For the reference, here is the list of the said long-time Tox contributors running the infrastructure:
+For the reference, here is the list of the said long-time Tox contributors
+running the infrastructure:
 
 *   [Impyy](mailto:impyy@tox.chat)
 *   [irungentoo](mailto:irungentoo@tox.chat)
