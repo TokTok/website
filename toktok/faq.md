@@ -5,15 +5,19 @@ menu_index: 7
 navicon: fas fa-info-circle
 ---
 
+<div style="float: center">
 # FAQ
+</div>
 
 The most common questions we get are answered here. If you have a
 question for us that you think should appear in this list that doesn't,
 send an email to the support mailing list with your
 suggestion: [support@lists.tox.chat](mailto:support@lists.tox.chat)
 
+<div style="float: center">
 # User FAQ
-[Skip to technical FAQ (advanced)](#technical-faq-advanced)
+### [Skip to technical FAQ (advanced)](#technical-faq-advanced)
+</div>
 
 -   [How does Tox protect my privacy?](#how-does-tox-protect-my-privacy)
 -   [How do I add someone to my contacts list?](#how-do-i-add-someone-to-my-contacts-list)
@@ -40,7 +44,7 @@ which should look something like:
 Give yours to your friend and get your friend to add it. That's it.
 
 If you want a shorter and more memorable ID, you can use a service
-like [ToxMe](https://toxme.io/), that maps an 
+like [ToxMe](https://toxme.io/), that maps an
 email-address-style username to a Tox ID. However, an individual
 concerned about their security should avoid using these services
 where possible. Unfortunately, the cost of this convenient name-to-Tox ID
@@ -66,6 +70,47 @@ to someone only when you add them to your contacts list.
 
 See Also: [What is stopping people from tracking me through the public DHT (advanced)](#tox-tracking-dht).
 
+<div style="float: center">
 # Technical FAQ (advanced)
-[Back to user FAQ](#user-faq)
+### [Back to user FAQ](#user-faq)
+</div>
 
+-   [Does Tox rely on central servers?](#does-tox-rely-on-central-servers)
+-   [Which encryption algorithms does Tox employ?](#which-encryption-algorithms-does-toxcore-employ)
+-   [Where can I find a public DHT node to bootstrap with?](#where-can-i-find-a-public-dht-node-to-bootstrap-with)
+-   [What codecs does Toxcore use for audio and video?](#what-codecs-does-toxcore-use-for-audio-and-video)
+-   [What is stopping people from tracking me through the public DHT?](#what-is-stopping-people-from-tracking-me-through-the-public-dht)
+
+## Does Tox rely on central servers?
+
+No. That said, in some situations a client will choose to
+use [publicly listed bootstrap nodes](https://nodes.tox.chat/) to
+find their way into the DHT.
+
+## Which encryption algorithms does Toxcore employ?
+
+Tox uses the cryptographic primitives present in
+the [NaCl crypto library](http://nacl.cr.yp.to/index.html),
+via [libsodium](https://github.com/jedisct1/libsodium). Specifically,
+Tox employs [curve25519](https://en.wikipedia.org/wiki/Curve25519) for
+its key exchanges, [xsalsa20](https://download.libsodium.org/doc/advanced/xsalsa20.html) for
+symmetric encryption, and [poly1305](https://en.wikipedia.org/wiki/Poly1305) for MACs.
+
+## Where can I find a public DHT node to bootstrap with?
+
+Check out our [public nodes list](https://nodes.tox.chat) for
+an updated list, including [machine-readable JSON output](https://nodes.tox.chat/json).
+
+## What codecs does Toxcore use for audio and video?
+
+[Opus](http://opus-codec.org/) for audio,
+and [VP8](https://en.wikipedia.org/wiki/VP8) for video.
+Tox does not make use of SIP.
+
+## What is stopping people from tracking me through the public DHT?
+
+Tox generates a temporary public/private key pair used to make connections
+to non-friend peers in the DHT.
+[Onion routing](https://en.wikipedia.org/wiki/Onion_routing) is
+used to store and locate Tox IDs, to make it more difficult to, for example,
+associate Alice and Bob together by who they are looking for in the network.
