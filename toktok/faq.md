@@ -37,7 +37,7 @@ personal private key, which never leaves your computer
 Look in the profile or settings panel of your client to get your Tox ID
 which should look something like:
 
-56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5
+`56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5`
 
 Give yours to your friend and get your friend to add it. That's it.
 
