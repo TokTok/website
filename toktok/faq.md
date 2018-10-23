@@ -5,19 +5,15 @@ menu_index: 7
 navicon: fas fa-info-circle
 ---
 
-<div style="float: center">
 # FAQ
-</div>
 
 The most common questions we get are answered here. If you have a
 question for us that you think should appear in this list that doesn't,
 send an email to the support mailing list with your
 suggestion: [support@lists.tox.chat](mailto:support@lists.tox.chat)
 
-<div style="float: center">
 # User FAQ
 ### [Skip to technical FAQ (advanced)](#technical-faq-advanced)
-</div>
 
 -   [How does Tox protect my privacy?](#how-does-tox-protect-my-privacy)
 -   [How do I add someone to my contacts list?](#how-do-i-add-someone-to-my-contacts-list)
@@ -68,12 +64,10 @@ your Tox connections through Tor. However, a non-friend user cannot easily
 discover your IP address using only a Tox ID; you reveal your IP address
 to someone only when you add them to your contacts list.
 
-See Also: [What is stopping people from tracking me through the public DHT (advanced)](#tox-tracking-dht).
+See Also: [What is stopping people from tracking me through the public DHT (advanced)](#what-is-stopping-people-from-tracking-me-through-the-public-dht).
 
-<div style="float: center">
 # Technical FAQ (advanced)
 ### [Back to user FAQ](#user-faq)
-</div>
 
 -   [Does Tox rely on central servers?](#does-tox-rely-on-central-servers)
 -   [Which encryption algorithms does Tox employ?](#which-encryption-algorithms-does-toxcore-employ)
