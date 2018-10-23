@@ -14,7 +14,7 @@ suggestion: [support@lists.tox.chat](mailto:support@lists.tox.chat)
 
 # User FAQ
 
-### [Skip to technical FAQ (advanced)](#technical-faq-advanced)
+[Skip to technical FAQ (advanced)](#technical-faq-advanced)
 
 -   [How does Tox protect my privacy?](#how-does-tox-protect-my-privacy)
 -   [How do I add someone to my contacts list?](#how-do-i-add-someone-to-my-contacts-list)
@@ -37,7 +37,7 @@ personal private key, which never leaves your computer
 Look in the profile or settings panel of your client to get your Tox ID
 which should look something like:
 
-    56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5
+56A1ADE4B65B86BCD51CC73E2CD4E542179F47959FE3E0E21B4B0ACDADE51855D34D34D37CB5
 
 Give yours to your friend and get your friend to add it. That's it.
 
@@ -70,7 +70,7 @@ See Also: [What is stopping people from tracking me through the public DHT (adva
 
 # Technical FAQ (advanced)
 
-### [Back to user FAQ](#user-faq)
+[Back to user FAQ](#user-faq)
 
 -   [Does Tox rely on central servers?](#does-tox-rely-on-central-servers)
 -   [Which encryption algorithms does Tox employ?](#which-encryption-algorithms-does-toxcore-employ)
