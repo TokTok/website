@@ -29,7 +29,7 @@ suggestion: [support@lists.tox.chat](mailto:support@lists.tox.chat)
 -   Enforcing end-to-end encryption
 with [perfect forward secrecy](https://en.wikipedia.org/wiki/Forward_secrecy)
 as the default and only mode of operation for all messages
--   Making your identity impossible to forge without the possesion of your
+-   Making your identity impossible to forge without the possession of your
 personal private key, which never leaves your computer
 
 ## How do I add someone to my contacts list
