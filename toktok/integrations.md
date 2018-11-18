@@ -40,6 +40,7 @@ yourself to this page.
 *   [Antox](https://github.com/Antox/Antox) (Android)
 *   [Cyanide](https://github.com/krobelus/cyanide) (SailfishOS)
 *   [Harbour-tox](https://github.com/emmanuelduv/harbour-tox) (Sailfish on Jolla)
+*   [jTox](https://github.com/almindor/harbour-jTox) (SailfishOS)
 *   [ToxDroid](https://github.com/suzp1984/ToxDroid) (Android)
 *   [TRIfA](https://github.com/zoff99/ToxAndroidRefImpl) (Android)
 
