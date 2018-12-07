@@ -26,7 +26,7 @@ yourself to this page.
 *   [Pastox](https://github.com/JX7P/Pastox)
 *   [qTox](https://github.com/qTox/qTox)
 *   [Ricin](https://github.com/RicinApp/Ricin)
-*   [Toxer](https://github.com/antis81/Toxer)
+*   [Toxer](https://gitlab.com/Toxer/toxer-desktop)
 *   [Toxic](https://github.com/JFreegman/toxic)
 *   [Toxygen](https://github.com/toxygen-project/toxygen)
 *   [Toxy](https://github.com/alexbakker/Toxy)
@@ -41,6 +41,7 @@ yourself to this page.
 *   [Cyanide](https://github.com/krobelus/cyanide) (SailfishOS)
 *   [Harbour-tox](https://github.com/emmanuelduv/harbour-tox) (Sailfish on Jolla)
 *   [jTox](https://github.com/almindor/harbour-jTox) (SailfishOS)
+*   [Toxer](https://gitlab.com/Toxer/toxer-sfos) (SailfishOS)
 *   [ToxDroid](https://github.com/suzp1984/ToxDroid) (Android)
 *   [TRIfA](https://github.com/zoff99/ToxAndroidRefImpl) (Android)
 
