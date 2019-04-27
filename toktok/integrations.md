@@ -107,7 +107,6 @@ yourself to this page.
 *   [ToxIRC](https://github.com/endoffile78/toxirc)
 *   [tox-prpl](https://github.com/jin-eld/tox-prpl)
 *   [ToxSuite](https://github.com/bignaux/ToxSuite)
-*   [ToxSync](https://github.com/MKras/ToxSync)
 *   [ToxVPN](https://github.com/cleverca22/toxvpn)
 *   [Tox-Weechat](https://github.com/haavard/tox-weechat)
 *   [Tuntox](https://github.com/gjedeer/tuntox)
