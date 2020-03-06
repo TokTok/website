@@ -78,6 +78,7 @@ yourself to this page.
 *   [Java](https://github.com/zoff99/java_toxclient_example/tree/master/jni-c-toxcore)
 *   [Java/Scala](https://github.com/TokTok/jvm-toxcore-c)
 *   [JavaScript](https://github.com/TokTok/js-toxcore-c)
+*   [Nim](https://git.sr.ht/~ehmry/nim_tox)
 *   [Node.js](https://github.com/w3x731/NodeTox)
     (Node.js [addon](https://nodejs.org/api/addons.html#addons_c_addons))
 *   [Julia](https://github.com/JuliaIO/Toxcore.jl)
@@ -94,6 +95,7 @@ yourself to this page.
 # Other
 
 *   [eCamera](https://github.com/stiartsly/eCamera)
+*   [hqtoxbot](https://gitea.c3d2.de/ehmry/hqtoxbot)
 *   [libToxTun](https://github.com/ddorian1/libToxTun)
 *   [MessageRelay](https://github.com/markwinter/MessageRelay)
 *   [P2Psocket](https://github.com/stiartsly/p2psocket)
