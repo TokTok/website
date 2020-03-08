@@ -27,6 +27,11 @@ on the branch to enter Reviewable.io and do a code review.
       <td>&#x1f6a7;</td>
     </tr>
     <tr>
+      <td>draft</td>
+      <td>author says it's not ready for review</td>
+      <td>&#x1f4dd;</td>
+    </tr>
+    <tr>
       <td>dirty</td>
       <td>merge conflict</td>
       <td>&#x274c;</td>
