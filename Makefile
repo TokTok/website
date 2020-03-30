@@ -35,13 +35,14 @@ toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
 	  pandoc				\
 	    -f latex+lhs			\
 	    -t native				\
-	    src/tox/Network/Tox.tex 		\
+	    src/Network/Tox.tex 		\
 	  | grep -v '^,CodeBlock ' 		\
 	  | pandoc -f native -t markdown_github	\
-	  >> ../toktok/spec.md;			\
+	  >> ../$@;				\
 	  find . -name "*.lhs" -delete;		\
 	  git checkout .;			\
 	}
+	grep Introduction $@
 
 .PHONY: hs-toxcore
 hs-toxcore:
