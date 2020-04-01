@@ -7,8 +7,8 @@
 - name: echobot-jvm
 - name: go-toxcore-c
 - name: hs-github-tools
-- name: hs-msgpack
-- name: hs-msgpack-rpc
+- name: hs-msgpack-binary
+- name: hs-msgpack-rpc-conduit
 - name: hs-msgpack-types
 - name: hs-schema
 - name: hs-tokstyle
