@@ -1,42 +1,65 @@
-FROM alpine:3.21
+FROM ubuntu:22.04
 
-# hadolint ignore=DL3018
-RUN ["apk", "add", "--no-cache", \
- "curl", \
- "g++", \
- "gcc", \
- "git", \
- "graphviz", \
- "jekyll", \
- "make", \
- "pandoc", \
- "py3-pip", \
- "python3"]
-RUN python3 -m venv /path/to/venv
-# hadolint ignore=DL3013
-RUN . /path/to/venv/bin/activate \
- && pip install --no-cache-dir LinkChecker
+ENV DEBIAN_FRONTEND="noninteractive"
 
-RUN ["gem", "install", "--no-document", "guard-livereload", "mdl"]
+# hadolint ignore=DL3008
+RUN apt-get update && apt-get install -y --no-install-recommends \
+ curl \
+ g++ \
+ git \
+ make \
+ pandoc \
+ python-is-python3 \
+ python2 \
+ python3 \
+ python3-bs4 \
+ python3-dnspython \
+ python3-requests \
+ python3-urllib3 \
+ python3-xdg \
+ ruby \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* \
+ && curl -s -o linkchecker.deb http://ftp.debian.org/debian/pool/main/l/linkchecker/linkchecker_10.0.1-2_amd64.deb \
+ && dpkg -i linkchecker.deb \
+ && rm linkchecker.deb
 
-RUN addgroup -S builder && adduser -SDH -G builder builder
-USER builder
+RUN ["mkdir", "/usr/local/nvm"]
+ENV NVM_DIR=/usr/local/nvm \
+    NODE_VERSION=14.18.2
 
-WORKDIR /home/builder/build
-COPY --chown=builder:builder Makefile /home/builder/build/
-COPY --chown=builder:builder entrypoint.sh /home/builder/
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash \
+ && . $NVM_DIR/nvm.sh \
+ && nvm install $NODE_VERSION \
+ && nvm alias default $NODE_VERSION \
+ && nvm use default
 
-COPY --chown=builder:builder toktok/spec.md.dist /home/builder/build/toktok/
-RUN ["make", "toktok/spec.md"]
+ENV NODE_PATH=$NVM_DIR/v$NODE_VERSION/lib/node_modules \
+    PATH=$NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
-COPY --chown=builder:builder toktok/ /home/builder/build/toktok/
-RUN ["make", "toktok-site"]
+RUN ["gem", "install", "--no-document", "mdl"]
 
-COPY .md-style.rb /home/builder/build/
-RUN ["make", "lint"]
-RUN . /path/to/venv/bin/activate \
- && make check \
- && mv toktok-site _site
+RUN groupadd -r -g 1000 builder \
+ && useradd --no-log-init -r -g builder -u 1000 builder
+
+COPY toktok /home/builder/build/toktok/
+#COPY Makefile /home/builder/build/
+COPY entrypoint.sh /home/builder/
+
+#COPY --chown=builder:builder toktok/spec.md.dist /home/builder/build/toktok/
+#RUN ["make", "toktok/spec.md"]
+
+#RUN ["make", "hs-toxcore"]
+#RUN ["make", "toktok-site"]
+
+#COPY .md-style.rb /home/builder/build/
+#RUN ["make", "lint"]
+#RUN ["make", "check"]
+WORKDIR /home/builder/build/toktok
+RUN ["npm", "install"]
+RUN ["npm", "run", "build"]
+
+RUN ["mv", "/home/builder/build/toktok/public/", "/home/builder/build/_site"]
 
 WORKDIR /home/builder/build/_site
 ENTRYPOINT ["/home/builder/entrypoint.sh"]
