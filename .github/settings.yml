@@ -1,0 +1,26 @@
+---
+_extends: template
+
+repository:
+  name: website
+  description: The TokTok website
+  topics: toktok, tox
+  has_issues: true
+
+branches:
+  - name: "master"
+    protection:
+      required_status_checks:
+        contexts:
+          - Codacy/PR Quality Review
+          - CodeFactor
+          - Travis CI - Pull Request
+          - WIP
+          - code-review/reviewable
+          - license/cla
+          # Netlify tests:
+          - Header rules - toktok
+          - Pages changed - toktok
+          - Redirect rules - toktok
+          - Mixed content - toktok
+          - netlify/toktok/deploy-preview
