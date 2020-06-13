@@ -45,7 +45,7 @@ yourself to this page.
 *   [ToxDroid](https://github.com/suzp1984/ToxDroid) (Android)
 *   [TRIfA](https://github.com/zoff99/ToxAndroidRefImpl) (Android)
 *   [Protox](https://gitlab.com/Monsterovich/protox) (Android)
-*   [Atox](https://github.com/evilcorpltd/aTox) (Android)
+*   [aTox](https://github.com/evilcorpltd/aTox) (Android)
 
 # Hardware
 
