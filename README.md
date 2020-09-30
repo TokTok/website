@@ -1,7 +1,7 @@
 # GEMS
 
-GEM is the new web based app which is better than everthing
-first try then review
+GEM is the new web based app which is better than everthing avalaivable in the current market.
+try first and believe that it will be above your expectation
 
 ## Development
 
