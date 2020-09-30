@@ -1,6 +1,6 @@
 # website
 
-The new website with something better than Yst (also, change the title)
+The new website with amazing experience and better performance (also, change the title)
 
 ## Development
 
