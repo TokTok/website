@@ -1,6 +1,6 @@
-# website
+# Website-a better one.
 
-The new website with something better than Yst (also, change the title)
+The new website with something better than the  1st one.
 
 ## Development
 
@@ -22,8 +22,8 @@ To work on the website you need the following things:
 The follwing make targets are available:
 
 - `make all`: build the complete website including external content.
-- `make changelog`: download changelogs (included in `all`)
-- `make roadmap`: download roadmaps (included in `all`)
-- `make spec`: download and parse the spec with pandoc (included in `all`)
-- `make lint`: run markdown linter `mdl`
-- `make check`: run linkchecker
+- `make changelog`: download changelogs (included in `all`).
+- `make roadmap`: download roadmaps (included in `all`).
+- `make spec`: download and parse the spec with pandoc (included in `all`).
+- `make lint`: run markdown linter `mdl`.
+- `make check`: run linkchecker.
