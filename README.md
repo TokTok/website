@@ -21,9 +21,9 @@ To work on the website you need the following things:
 
 The follwing make targets are available:
 
-- `make all`: build the complete website including external content.
-- `make changelog`: download changelogs (included in `all`)
-- `make roadmap`: download roadmaps (included in `all`)
-- `make spec`: download and parse the spec with pandoc (included in `all`)
-- `make lint`: run markdown linter `mdl`
-- `make check`: run linkchecker
+1. `make all`: build the complete website including external content.
+2. `make changelog`: download changelogs (included in `all`).
+3. `make roadmap`: download roadmaps (included in `all`).
+4. `make spec`: download and parse the spec with pandoc (included in `all`).
+5. `make lint`: run markdown linter `mdl`.
+6. `make check`: run linkchecker.
