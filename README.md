@@ -24,6 +24,6 @@ The follwing make targets are available:
 - `make all`: build the complete website including external content.
 - `make changelog`: download changelogs (included in `all`)
 - `make roadmap`: download roadmaps (included in `all`)
-- `make spec`: download and parse the spec with pandoc (included in `all`)
+- `make spec`: download and pause the spec with pandoc (included in `all`)
 - `make lint`: run markdown linter `mdl`
 - `make check`: run linkchecker
