@@ -1,4 +1,4 @@
-all
+all the information about rule of project
 
 # Rustdoc and some other markdown parsers don't like 2-space list indent.
 rule 'MD007', :indent => 4
