@@ -1,6 +1,7 @@
 # website
 
 The new website with something better than Yst (also, change the title)
+We are a focused effort to bring high quality privacy enhancing software to everybody.
 
 ## Development
 
