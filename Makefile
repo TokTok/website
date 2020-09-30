@@ -73,4 +73,3 @@ upload: toktok-site
 	cd $(WEB_NAME) && git add -A .
 	cd $(WEB_NAME) && git commit --amend --reset-author -m'Updated website'
 	cd $(WEB_NAME) && git push --force --quiet
-
