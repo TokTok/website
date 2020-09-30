@@ -1,10 +1,10 @@
 # website
 
-The new website with something better than Yst (also, change the title)
+The New Website With Something Better Than Yesterday (also, change the title)
 
 ## Development
 
-To work on the website you need the following things:
+To Work On The Website You Need The Following things:
 
 - Jekyll and mdl via ruby gems: `gem install jekyll mdl guard-livereload`.
   You might need ruby development headers for this to work: `apt-get install ruby-dev`.
