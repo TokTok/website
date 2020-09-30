@@ -1,6 +1,6 @@
 # website
 
-The new website with something better than Yst "youth Torrent Solutions" (also, change the title)
+The new website with something better than Yst "Youth Sport Trust" (also, change the title)
 
 ## Development
 
