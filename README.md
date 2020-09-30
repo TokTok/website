@@ -1,6 +1,6 @@
-# website
+# Website
 
-The new website with something better than Yst (also, change the title)
+The new website with something better than Yst. (also, change the title)
 
 ## Development
 
@@ -19,11 +19,11 @@ To work on the website you need the following things:
 - linkchecker via `apt-get install linkchecker`
   (optional for link checking).
 
-The follwing make targets are available:
+■ The follwing make targets are available: 
 
-- `make all`: build the complete website including external content.
-- `make changelog`: download changelogs (included in `all`)
-- `make roadmap`: download roadmaps (included in `all`)
-- `make spec`: download and parse the spec with pandoc (included in `all`)
-- `make lint`: run markdown linter `mdl`
-- `make check`: run linkchecker
+- `make_all`: build the complete website including external content.
+- `make_changelog`: download changelogs (included in `all`)
+- `make_roadmap`: download roadmaps (included in `all`)
+- `make_spec`: download and parse the spec with pandoc (included in `all`)
+- `make_lint`: run markdown linter `mdl`
+- `make_check`: run linkchecker
