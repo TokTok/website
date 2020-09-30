@@ -1,6 +1,7 @@
-# website
+# GEMS
 
-The new website with something better than Yst (also, change the title)
+GEM is the new web based app which is better than everthing
+first try then review
 
 ## Development
 
