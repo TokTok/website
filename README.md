@@ -27,3 +27,4 @@ The follwing make targets are available:
 - `make spec`: download and parse the spec with pandoc (included in `all`)
 - `make lint`: run markdown linter `mdl`
 - `make check`: run linkchecker
+### Thank you
