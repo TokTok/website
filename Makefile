@@ -1,3 +1,4 @@
+--Website Build configuration--
 WEB_NAME := toktok.github.io
 
 ifneq ($(GITHUB_TOKEN),)
