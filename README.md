@@ -1,4 +1,4 @@
-# website
+# website - An Amaing Platform
 
 The new website with something better than Yst (also, change the title)
 
