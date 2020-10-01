@@ -1,5 +1,5 @@
 # website
-# made by gaurang bhavsar 
+# very good website . Good project .
 The new website with something better than Yst (also, change the title)
 
 ## Development
