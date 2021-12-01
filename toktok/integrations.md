@@ -36,7 +36,7 @@ yourself to this page.
 
 # Mobile clients
 
-*   [Antidote](https://github.com/Antidote-for-Tox/Antidote) (iOS)
+*   [Antidote](https://github.com/Zoxcore/Antidote) (iOS)
 *   [Antox](https://github.com/Antox/Antox) (Android)
 *   [Cyanide](https://github.com/krobelus/cyanide) (SailfishOS)
 *   [Harbour-tox](https://github.com/emmanuelduv/harbour-tox) (Sailfish on Jolla)
