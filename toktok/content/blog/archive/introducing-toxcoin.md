@@ -37,7 +37,7 @@ running fast and to fund development is to make it its own crypto currency.
 Toxcoin will also be used to fund development of Tox. Tox developers will be
 payed in Toxcoins which will increase in value as more and more people used
 Tox. If we assume a total market cap of 1 million toxcoin and assume each tox
-user is worth 10$. When Tox reaches 1 billion users each toxcoin will be worth 
+user is worth 10$. When Tox reaches 1 billion users each toxcoin will be worth
 10000$. Toxcoins are clearly an investment that will only grow in value.
 Investing in this con will truly increase your money.
 
