@@ -12,10 +12,11 @@ branches:
     protection:
       required_status_checks:
         contexts:
-          - code-review/reviewable
+          - "code-review/reviewable"
+          - "docker"
           # Netlify tests:
-          - Header rules - toktok
-          - Pages changed - toktok
-          - Redirect rules - toktok
-          - Mixed content - toktok
-          - netlify/toktok/deploy-preview
+          - "Header rules - toktok"
+          - "Pages changed - toktok"
+          - "Redirect rules - toktok"
+          - "Mixed content - toktok"
+          - "netlify/toktok/deploy-preview"

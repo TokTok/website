@@ -23,7 +23,7 @@ RUN curl -s -o linkchecker.deb http://ftp.debian.org/debian/pool/main/l/linkchec
  && dpkg -i linkchecker.deb \
  && rm linkchecker.deb
 
-RUN ["gem", "install", "jekyll", "guard-livereload", "mdl"]
+RUN ["gem", "install", "--no-document", "jekyll", "guard-livereload", "mdl"]
 
 RUN groupadd -r -g 1000 builder \
  && useradd --no-log-init -r -g builder -u 1000 builder
@@ -31,6 +31,7 @@ RUN groupadd -r -g 1000 builder \
 WORKDIR /home/builder/build
 COPY toktok /home/builder/build/toktok/
 COPY Makefile /home/builder/build/
+COPY entrypoint.sh /home/builder/
 
 RUN ["chown", "-R", "builder:builder", "/home/builder"]
 USER builder
@@ -43,4 +44,4 @@ RUN ["make", "lint"]
 RUN ["make", "check"]
 
 WORKDIR /home/builder/build/toktok-site
-ENTRYPOINT ["python3", "-m", "http.server"]
+ENTRYPOINT ["/home/builder/entrypoint.sh"]
