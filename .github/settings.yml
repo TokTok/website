@@ -1,5 +1,5 @@
 ---
-_extends: template
+_extends: .github
 
 repository:
   name: website
@@ -12,15 +12,11 @@ branches:
     protection:
       required_status_checks:
         contexts:
-          - Codacy/PR Quality Review
-          - CodeFactor
-          - Travis CI - Pull Request
-          - WIP
-          - code-review/reviewable
-          - license/cla
+          - "code-review/reviewable"
+          - "docker"
           # Netlify tests:
-          - Header rules - toktok
-          - Pages changed - toktok
-          - Redirect rules - toktok
-          - Mixed content - toktok
-          - netlify/toktok/deploy-preview
+          - "Header rules - toktok"
+          - "Pages changed - toktok"
+          - "Redirect rules - toktok"
+          - "Mixed content - toktok"
+          - "netlify/toktok/deploy-preview"
