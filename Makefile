@@ -34,10 +34,9 @@ toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
 	  done;					\
 	  pandoc				\
 	    -f latex+lhs			\
-	    -t native				\
+	    -t gfm				\
 	    src/Network/Tox.tex 		\
-	  | grep -v '^,CodeBlock ' 		\
-	  | pandoc -f native -t markdown_github	\
+	    | sed -e '/```.*literate/,/```/d'	\
 	  >> ../$@;				\
 	  find . -name "*.lhs" -delete;		\
 	  git checkout .;			\
@@ -56,7 +55,10 @@ hs-toxcore:
 # deployment tasks
 #
 lint:
-	mdl -i -w -s .md-style.rb toktok
+	mdl -i -w -s .md-style.rb $$(find toktok -name "*.md" \
+		-and -not -wholename "toktok/spec.md" \
+		-and -not -wholename "toktok/changelog/c-toxcore.md" \
+		-and -not -wholename "toktok/roadmap/c-toxcore.md")
 
 check:
 	mkdir -p ~/.linkchecker/
@@ -72,4 +74,3 @@ upload: toktok-site
 	cd $(WEB_NAME) && git add -A .
 	cd $(WEB_NAME) && git commit --amend --reset-author -m'Updated website'
 	cd $(WEB_NAME) && git push --force --quiet
-
