@@ -6,6 +6,7 @@ tags:
 ---
 
 Hello everyone. We realize it's been a while since the last post, but a lot has happened and Tox continues to progress, so there's a lot to talk about.
+
 <!-- more -->
 
 ##Tox core
@@ -19,7 +20,7 @@ As a small treat, the [boostrap daemon](https://github.com/irungentoo/toxcore/tr
 ####New groupchats
 Additionally, work is progressing on the complete [groupchat re-design](https://github.com/JFreegman/toxcore) and overhaul, started by [alnf](https://github.com/alnf) and currently being led primarily by [JFreegman](https://github.com/JFreegman). Features include moderation abilities and group chat persistence (!). These group chats are a long way from being ready to merge into master; however, there is now a properly [modified build of Toxic](https://jenkins.libtoxcore.so/job/toxic_linux_beta/lastSuccessfulBuild/artifact/toxic) for Linux available with the changes.
 
-You can also download the modified Toxic by installing `toxic-beta` from our Apt and Yum repos and running ``toxic-beta``. Keep in mind that this copy is totally isolated from your existing Toxic install to prevent issues.
+You can also download the modified Toxic by installing `toxic-beta` from our Apt and Yum repos and running `toxic-beta`. Keep in mind that this copy is totally isolated from your existing Toxic install to prevent issues.
 
 Please be aware that this is experimental testing code that will not work with the regular Tox network until we've finished it and merged it with master. You can follow development on the #tox-groupchats IRC channel on Freenode.
 
@@ -62,7 +63,6 @@ As mentioned above, work continues on Tox4j, the replacement Java wrapper for co
 
 A fork of the old Antox is currently being maintained against the Tox4j work in progress. You can download it by joining the Google Play beta or adding our F-Droid repo. Details on this are [here](https://wiki.tox.im/Binaries).
 
-
 ##Website improvements
 
 We've been continuously working to improve and refine the experience for new users by making things simpler and more straightforward. With this, we're currently working on a new site for tox.im and a new downloads page until the site is complete.
@@ -77,8 +77,4 @@ By popular demand we've added a reverse lookup API to ToxMe. This allows people 
 
 If you use our RPM repo you may have suffered some issues downloading Tox due to an old revoked PGP key getting stuck in the signing process. We've gone ahead and fixed all the issues associated with that and ensured that it works perfectly.
 
-Supporting our new downloads page, we've gone ahead and made the qTox packages automatically configure and setup the repo on your system by just installing the deb. This means for normal users all you'll have to do is click download and Ubuntu software center will pop up to automatically set everything up and ensure you always have the latest and greatest copy of qTox. If you had the repo installed before it may cause conflicts in apt. Please remove it by running ``rm /etc/apt/sources.list.d/toxrepo.list`` and it'll take care of itself automatically.
-
-
-
-
+Supporting our new downloads page, we've gone ahead and made the qTox packages automatically configure and setup the repo on your system by just installing the deb. This means for normal users all you'll have to do is click download and Ubuntu software center will pop up to automatically set everything up and ensure you always have the latest and greatest copy of qTox. If you had the repo installed before it may cause conflicts in apt. Please remove it by running `rm /etc/apt/sources.list.d/toxrepo.list` and it'll take care of itself automatically.

@@ -1,7 +1,7 @@
 ---
 title: Tox, bringing your friends closer
 date: 2015-04-1 00:00:02
-author:  Sean
+author: Sean
 tags:
 ---
 
@@ -16,7 +16,7 @@ and mobile device users as best we can.
 With [ToxCOIN](https://blog.tox.im/2015/04/01/introducing-toxcoin/) support having been recently
 announced we realized progress was being made in the right direction,
 but it wasn't enough. We realized that some people might still
-want to use traditional Tox IDs and use mobile devices at the 
+want to use traditional Tox IDs and use mobile devices at the
 same time so we decided to take a step back from what we're used
 to and look at what much of our mobile using audience is already doing.
 
@@ -32,11 +32,8 @@ Starting today, most of our clients now support fun and friendly emoji
 in place of existing scary and frightening Tox IDs, be it uTox or Toxy
 with more clients in the works.
 
-
-Ready to try it out? lean back, open uTox Android, and punch in 
-``🌔💡⭩⬃⚿🚧⟛⋏⩮🚍🛱💖🖭⚏⋻😇∁⤔ℐ⋜↷⚑⍕👫≧ℇ😇`` to join our always 
+Ready to try it out? lean back, open uTox Android, and punch in
+`🌔💡⭩⬃⚿🚧⟛⋏⩮🚍🛱💖🖭⚏⋻😇∁⤔ℐ⋜↷⚑⍕👫≧ℇ😇` to join our always
 popular groupchat in style.
-
-
 
 Want to make your own emoji ID? Checkout the tools [here](https://github.com/irungentoo/base_emoji).

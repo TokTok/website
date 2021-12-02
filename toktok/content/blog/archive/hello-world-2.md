@@ -1,7 +1,7 @@
 ---
 title: Hello World
 id: 7
-author: 
+author:
 categories:
   - Tox Core
 date: 2014-03-10 19:21:30

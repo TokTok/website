@@ -14,8 +14,10 @@ Howdy folks for the 2nd time today!
 
 Remember that time you got Linux running on your Wii? When you managed to install Debian to your Raspberry Pi?
 
-Wouldn't it be *super cool* if you could Tox your friends without dealing with a compiler or git?
+Wouldn't it be _super cool_ if you could Tox your friends without dealing with a compiler or git?
+
 <!-- more -->
+
 Thankfully we agree, and we know you have tons of other cases where x86/x86_64 might not be the architecture of your PC. We believe you should be able to Tox no matter where you are or what you use without a bunch of work or hacks, so we're introducing the Tox Everywhere initiative.
 
 Be it your PowerPC Mac running Linux or your Wii, the Tox Everywhere initiative was created to give everyone with whatever odd case you may have the same ease of ability to use Tox as our traditional x86 friends

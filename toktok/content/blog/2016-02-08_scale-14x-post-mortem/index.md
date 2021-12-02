@@ -76,7 +76,7 @@ Shout-outs to [Digital Ocean](https://www.digitalocean.com/),
 [Snowdrift](https://snowdrift.coop/), [Open Source
 Initiative](http://opensource.org/), and all of the other awesome
 exhibitors that we got a chance to meet with at SCaLE. And a shout-out
-to my good friends *whyt* and *swiss*, for volunteering some of their
+to my good friends _whyt_ and _swiss_, for volunteering some of their
 time at our booth.
 
 In case you didn't catch them on our Facebook/Twitter, here are a few

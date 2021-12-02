@@ -9,8 +9,7 @@ status: published
 Hello everyone! It's been more than two months since the last update and
 quite a few things have happened since then, so an update is due.
 
-Website
--------
+## Website
 
 A new client has been added to our website --
 [Toxygen](https://tox.chat/clients.html). It's written in python and
@@ -20,8 +19,7 @@ page](https://github.com/toxygen-project/toxygen/releases). We also
 provide Debian and Ubuntu packages for it in our nightly package
 repository.
 
-Packaging
----------
+## Packaging
 
 Thanks to Encrypt's and tux3's efforts, we now provide packages for
 Ubuntu Xenial. As of writing this, the following client packages are
@@ -53,8 +51,7 @@ experience with creating proper .rpm packages in target distribution's
 chroots, we could use some help -- [please email
 Encrypt](mailto:encrypt@encrypt-tips.tk?subject=Help%20with%20rpm%20packaging&cc=infrastructure@tox.chat).
 
-Using Tox package repository
-----------------------------
+## Using Tox package repository
 
 Just as a reminder, here are instructions on how to get our packages on
 Debian and Ubuntu systems.
@@ -87,8 +84,7 @@ support at some point, as [those Ubuntu releases have reached their end
 of life](https://wiki.ubuntu.com/Releases), and adding support for
 Ubuntu Yakkety.
 
-Android
--------
+## Android
 
 Antox got [published on Google
 Play](https://play.google.com/store/apps/details?id=chat.tox.antox).
@@ -123,8 +119,7 @@ Google Play until Toxcore becomes more mobile friendly, so the uTox
 developer published uTox to Google Play just to provoke Antox developer
 publishing Antox. Such mind games our developers play with each other.
 
-Toxcore
--------
+## Toxcore
 
 Toxcore's developer, irungentoo, has been very busy lately and unable to
 find time to work on Toxcore. Because any change to Toxcore should be
@@ -172,8 +167,7 @@ complete and we become familiar with Toxcore codebase, we will be able
 to proceed with including new features into the Tox specification and
 implementing them.
 
-Multidevice
------------
+## Multidevice
 
 Multidevice support is not yet complete, [Grayhatter and several other
 contributors are still working on
@@ -181,8 +175,7 @@ it](https://github.com/GrayHatter/toxcore/tree/multi-device). Some of
 the things that need to be done include support of synchronization of
 video and audio calls, file transfers and friend deletion actions.
 
-New group chats
----------------
+## New group chats
 
 New group chat support is currently not being worked on by anyone. As
 you might have read from [the previous update blog

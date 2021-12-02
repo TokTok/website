@@ -18,7 +18,7 @@ here](https://www.youtube.com/watch?v=KMFOVSWn0mI).
 For those who don't know [what fuzzing
 is](https://www.youtube.com/watch?v=Xnwodi2CBws), it's a form of random
 code testing. The idea is simple: feed your program random/malformed
-data and wait for it to crash;  gather crash info, fix the crash, and
+data and wait for it to crash; gather crash info, fix the crash, and
 repeat (or log the crash and keep going). The purpose of this type of
 testing is to explore the deep dark corners of the state space in order
 to catch bugs that normal usage or unit testing would almost certainly
@@ -48,17 +48,17 @@ as even level-1 fuzzing has satisfactory code coverage much of the time.
 Before going any further, it would be helpful to understand the
 structure of a Tox groupchat packet:
 
-** \[  IP/UDP  |  Header 1  |  Header 2  |  App data  \]**
+** \[ IP/UDP | Header 1 | Header 2 | App data \]**
 
 Zooming in to the three sections we care about:
 
-Header 1:   **\[  Packet ID  (1 b)  |  Chat ID hash  (4 b)  |  Sender PK
-(32 b)  |  nonce (24 b)  \]**
+Header 1: **\[ Packet ID (1 b) | Chat ID hash (4 b) | Sender PK
+(32 b) | nonce (24 b) \]**
 
-Header 2:  **\[  Random padding (0-8 b)  |  Group packet type (1 b)
- \]**
+Header 2: **\[ Random padding (0-8 b) | Group packet type (1 b)
+\]**
 
-App data:  **\[  Sender pub-key hash (4 b)  |  payload (0-? b) \]**
+App data: **\[ Sender pub-key hash (4 b) | payload (0-? b) \]**
 
 The first header is a plain-text section comprised of integrity checks;
 if any of these are invalid the packet will be discarded. The second
@@ -76,11 +76,11 @@ app data. The code looks like
 does is create a data buffer containing a valid public-key hash and a
 bunch of random data as the payload (this is the app data section of the
 packet, which is always created before adding the headers). Then the
-packet is sent *n* times to each peer in the group, where *n* is the
+packet is sent _n_ times to each peer in the group, where _n_ is the
 number of different packet types that we want to test. If the for loops
-in **fuzz\_send\_group\_packet()** confuse you, check out the
-**GROUP\_PACKET\_TYPE** and **GROUP\_BROADCAST\_TYPE** enumerators in
-the [group\_chats.h
+in **fuzz_send_group_packet()** confuse you, check out the
+**GROUP_PACKET_TYPE** and **GROUP_BROADCAST_TYPE** enumerators in
+the [group_chats.h
 file](https://github.com/JFreegman/toxcore/blob/new_groupchats/toxcore/group_chats.h#L119).
 
 A few of the packet types only have a single data field in their
@@ -91,12 +91,12 @@ of the packet types have numerous fields with sensitive parsing
 operations tied to them, and these are the ones that require us to go a
 bit deeper. For example, the sync response payload looks like this:
 
-**\[  num\_peers  |  peer\_data\_1  |  peer\_data\_2  |  etc.  \]**
+**\[ num_peers | peer_data_1 | peer_data_2 | etc. \]**
 
 What makes it complicated is the fact that peer data is itself just
 another series of data chunks of varied sizes (a protocol within a
 protocol), all of which must be treated as untrusted and potentially
-malicious. What happens if num\_peers doesn't reflect the actual number
+malicious. What happens if num_peers doesn't reflect the actual number
 of peers being sent? What happens if critical parts of the peer data
 gets corrupted, such as the nick length? What happens if the packet is
 too small?
@@ -108,23 +108,23 @@ copy-pasted most of [the
 code](https://gist.github.com/JFreegman/9e317cc073f20e7be88e) for
 creating sync responses, adjusting things where needed. Most of that
 code isn't too relevant here; the interesting part is the call
-to** fuzz\_gc\_packet()** at the bottom. Go ahead and [take
+to** fuzz_gc_packet()** at the bottom. Go ahead and [take
 a look](https://gist.github.com/JFreegman/cc08d2f68a48bc34ff57) at
 what's inside that function, as it's the most critical part of the
 smart-fuzzing code, and differs quite a bit from the way level-1
 randomizes packets.
 
 Rather than randomizing every byte in the payload, bytes are randomized
-with a probability *f*, called the fuzz-factor, with use of the
-**fuzz\_this\_byte()** function. This is because I want to test packets
-with different levels of corruption. Having *f* constantly cycle with
+with a probability _f_, called the fuzz-factor, with use of the
+**fuzz_this_byte()** function. This is because I want to test packets
+with different levels of corruption. Having _f_ constantly cycle with
 clock ticks means I can test payloads with a level of corruption ranging
 from 0 bytes to the entire thing. In addition to randomizing bytes, I
 sometimes also modify the data length. This tests bounds checking,
 although it's only useful for packet types that don't have a strict
 length requirement. For example, we would want to do this for sync
 responses because the sync response handler only checks the lower bound
-with the clause: if (length &lt;= sizeof(uint32\_t)).
+with the clause: if (length &lt;= sizeof(uint32_t)).
 
 Once I finished the tedious task of re-creating all the message sender
 functions in fuzz-form and made sure everything was working properly, it
@@ -139,7 +139,7 @@ The address sanitizer is a much more reliable tool for this purpose
 (though it has its own downsides that make debugging more difficult).
 
 I ended up discovering a total of four bugs all within quick succession,
- two of which were memory related ([fix
+two of which were memory related ([fix
 1](https://github.com/JFreegman/toxcore/commit/1732318e05c8e3ddad67411eb59de999ee62db0d)),
 and two of which were behaviour related ([fix
 2](https://github.com/JFreegman/toxcore/commit/689ea6091ff2784c048380e22a8340b0c70f605e)).

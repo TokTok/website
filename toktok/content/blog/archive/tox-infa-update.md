@@ -15,7 +15,7 @@ We wanted to peacefully transition things and share data, working together to mo
 
 Unfortunately rather than work together to move everything and its data when I tried to discuss how to do so I was told to fuck off.
 
-Going forward, the Tox Foundation has decided that rather than let them break everything and since they don't want to work together, that we'll distance 
+Going forward, the Tox Foundation has decided that rather than let them break everything and since they don't want to work together, that we'll distance
 ourselves from the main of the project, running infrastructure and some external programs totally separate from the project itself.
 
 We've decided on the following course of action: Maintaining the site and build infrastructure until 2017, placing the wiki and mailing list in read only mode, maintaining and supporting ToxMe indefinitely, transitioning our DNS infrastructure to HE, making libtoxcore static fully, making tox.horse static, and migrating ToxMail offsite for about a year.

@@ -10,15 +10,15 @@ Hey guys, installgen2 here, I've been working a little bit on what I
 hope to be Tox's new website one day. Quite a few users have complained
 about the current site, for reasons which are listed:
 
--   Proprietary JS
--   Code nobody wants to work on
--   Broken scrolling (for a lot of browsers)
--   No mobile support
--   Design inconsistent with the rest of Tox
--   Extremely heavy resource usage
--   Everything listed [here](https://github.com/Tox/Tox-Website/issues)
--   [This](https://github.com/Tox/Tox-Website/issues/8) issue raises
-    some points too
+- Proprietary JS
+- Code nobody wants to work on
+- Broken scrolling (for a lot of browsers)
+- No mobile support
+- Design inconsistent with the rest of Tox
+- Extremely heavy resource usage
+- Everything listed [here](https://github.com/Tox/Tox-Website/issues)
+- [This](https://github.com/Tox/Tox-Website/issues/8) issue raises
+  some points too
 
 So, as nobody else to my knowledge had started developing a new site, I
 started work on one. Unfortunately, I don't have the time or the

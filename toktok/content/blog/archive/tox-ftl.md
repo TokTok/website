@@ -1,7 +1,7 @@
 ---
 title: Major Discovery by the Tox Foundation
 date: 2015-04-1 07:10:23
-author:  irungentoo
+author: irungentoo
 tags:
 ---
 
@@ -29,11 +29,9 @@ Antox was slowly replaced by uTox for android.
 
 nTox is still alive.
 
-
 I also received this image but can't make sense of it.
 
 {% limg Tox_ftl_message.jpg %}
-
 
 The connection was then cut suddenly. I will try to find out why the connection cut and why I can't seem to be able to contact the future anymore.
 

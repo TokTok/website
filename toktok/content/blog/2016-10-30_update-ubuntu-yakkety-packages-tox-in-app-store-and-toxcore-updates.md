@@ -9,8 +9,7 @@ status: published
 Hello everyone! Some of you have requested us to make a status update,
 so here we go.
 
-Packaging
-=========
+# Packaging
 
 Quite a bit has happened with Linux packaging this month.
 
@@ -39,7 +38,7 @@ that they contained Tox clients, when in fact they were empty.
 qTox packages were removed from all package repositories. In [the
 previous blog
 post](/2016-08-26_update-new-client-xenial-packages-tox-in-google-play-toxcore-fork-and-more/)
-we mentioned that [*Encrypt*](https://github.com/Encrypt) was going to
+we mentioned that [_Encrypt_](https://github.com/Encrypt) was going to
 take over the maintenance of qTox packages, but because of personal
 reasons he is not able to volunteer as much of his free time as he hoped
 he could. We decided that it's a bad idea to serve unmaintained packages
@@ -52,22 +51,19 @@ packages](https://github.com/qTox/qTox/blob/master/README.md#qtox), and
 which is linked on the [Download page](/download/)
 of our website.
 
-iOS
-===
+# iOS
 
 [Antidote](https://antidote.im/), the Tox client for iOS developer by
-[*dvor*](https://github.com/dvor), is now [on the App
+[_dvor_](https://github.com/dvor), is now [on the App
 Store](https://itunes.apple.com/app/antidote-for-tox/id933117605). Get
 it, try it out and send your feedback to Antidote's developer by either
 writing a review on the App Store or submitting a bug report/feature
 request to [the issue
 tracker](https://github.com/Antidote-for-Tox/Antidote/issues)!
 
-Toxcore
-=======
+# Toxcore
 
-irungentoo/toxcore
-------------------
+## irungentoo/toxcore
 
 [Not much has
 happened](https://github.com/irungentoo/toxcore/compare/1fa5887fee6016318d02911f78f3610dd0e0dc7f...dcf2aaa53005060608353b9d66b9917fd7ed18a9)
@@ -80,8 +76,7 @@ were fixed. A bug in development branch which resulted in a crash of
 Toxcore[\[3\]](https://github.com/irungentoo/toxcore/commit/ce60b9cf52dd20aedbe2f07ed29c96663f94c313)
 was fixed.
 
-TokTok/c-toxcore
-----------------
+## TokTok/c-toxcore
 
 [A lot of internal
 changes](https://github.com/irungentoo/toxcore/compare/755f084e8720b349026c85afbad58954cb7ff1d4...TokTok:de966cdf90843819e2f7287e22ddcb5f95491b18)

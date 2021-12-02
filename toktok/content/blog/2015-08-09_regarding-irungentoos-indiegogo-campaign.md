@@ -30,5 +30,3 @@ this is.
 
 We apologize if this has caused any confusion, and hope that this has
 sufficiently cleared up any misunderstandings.
-
- 

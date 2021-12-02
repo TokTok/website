@@ -1,7 +1,7 @@
 ---
 title: Tox for Chrome OS preview
 date: 2015-04-1 01:10:23
-author:  Sean
+author: Sean
 tags:
 ---
 
@@ -10,7 +10,7 @@ Tox development preview for Chrome OS
 <!-- more -->
 
 With the advent of the Chromebook, the face of modern computing
-changed in a number of drastic ways. Super low cost but fully 
+changed in a number of drastic ways. Super low cost but fully
 usable machines with browsers, chat programs, and full office
 suites became available to even the lowest income students.
 
@@ -34,10 +34,10 @@ this preview is.
 
 #Getting started
 
-* To test Antox for Chrome OS please click [here](https://chrome.google.com/webstore/detail/antox/mblkomdgjiaclkhabhmhnkmkfbbclgdi)
-* To test uTox for Chrome OS please click [here](https://chrome.google.com/webstore/detail/%CE%BCtox/cpbcplbgcffgmhagekhlifhpaihcgokf)
+- To test Antox for Chrome OS please click [here](https://chrome.google.com/webstore/detail/antox/mblkomdgjiaclkhabhmhnkmkfbbclgdi)
+- To test uTox for Chrome OS please click [here](https://chrome.google.com/webstore/detail/%CE%BCtox/cpbcplbgcffgmhagekhlifhpaihcgokf)
 
 #Reporting issues
 
-* To report Antox issues please visit the issue tracker [here](https://github.com/subliun/Antox/issues)
-* To report uTox issues please visit the issue tracker [here](https://github.com/notsecure/wintox/issues)
+- To report Antox issues please visit the issue tracker [here](https://github.com/subliun/Antox/issues)
+- To report uTox issues please visit the issue tracker [here](https://github.com/notsecure/wintox/issues)

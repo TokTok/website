@@ -11,8 +11,8 @@ for Tox A/V has finally been merged into toxcore.
 
 Changes:
 
--   A new API, similar to toxcore.
--   A better adaptive bit rate algorithm.
+- A new API, similar to toxcore.
+- A better adaptive bit rate algorithm.
 
 Nothing too surprising for the average user, but great news for
 developers.

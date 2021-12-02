@@ -9,7 +9,7 @@ tags:
 
 We don't normally push two APKs to Google Play in one day, but the recent commits urged us to do so. Various bugs that prevented a pleasant user experience were discovered and appropriately fixed. The total changes include:
 
-*   Updating status icons
-*   Properly fixing UI not updating on friend requests
-*   Move QR codes back to external storage so they may be shared
-That's it. Sorry for the double-update folks!
+- Updating status icons
+- Properly fixing UI not updating on friend requests
+- Move QR codes back to external storage so they may be shared
+  That's it. Sorry for the double-update folks!

@@ -25,4 +25,4 @@ here](https://pretalx.tox.zoff.cc/toxcon2019/cfp)!
 If you have any questions about booking, travel arrangements, talks, or
 anything related to the event, join
 [\#toxcon](https://webchat.freenode.net/?channels=#toxcon) IRC channel
-on Freenode and contact *robinli*, *strfry* or *zoff99*.
+on Freenode and contact _robinli_, _strfry_ or _zoff99_.

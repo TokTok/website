@@ -31,5 +31,5 @@ the speakers, and, if there is money left, T-shirts to give away.
 For questions about booking, travel arrangements, talks, or anything
 related to the event feel free to join the
 [\#toxcon2018](https://webchat.freenode.net/?channels=#toxcon2018) IRC
-channel on Freenode and contact one of the event organizers: *robinli*,
-*sudden6* or *zoff99*.
+channel on Freenode and contact one of the event organizers: _robinli_,
+_sudden6_ or _zoff99_.

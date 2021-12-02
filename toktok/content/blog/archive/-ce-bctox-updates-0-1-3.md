@@ -9,15 +9,15 @@ tags:
 
 **New features:**
 
-*   Network options: IPv6/UDP enable/disable
-*   SOCKS 5 proxy support (makes it possible to use Tox through Tor)
-*   Right click menus (Xlib, Windows already had them)
-*   Option to copy messages without the names (through a right click menu)
-*   Option to show only online friends
-*   Support for translations
-**Bugfixes:**
+- Network options: IPv6/UDP enable/disable
+- SOCKS 5 proxy support (makes it possible to use Tox through Tor)
+- Right click menus (Xlib, Windows already had them)
+- Option to copy messages without the names (through a right click menu)
+- Option to show only online friends
+- Support for translations
+  **Bugfixes:**
 
-*   Many small fixes
-**Other:**
+- Many small fixes
+  **Other:**
 
-*   toxcore has a new congestion control algorithm, file transfers should have better performance now
+- toxcore has a new congestion control algorithm, file transfers should have better performance now

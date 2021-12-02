@@ -15,7 +15,7 @@ months has been the release of the new group chats. Unfortunately, there
 is still no ETA. I finished writing the code base about 6 months ago and
 they've been available for testing for some time via my new groupchats
 [branch](https://github.com/JFreegman/toxcore). However, it's still
-missing one crucial thing: TCP support.  The new group chats cannot be
+missing one crucial thing: TCP support. The new group chats cannot be
 merged without TCP-DHT support in the core, which is currently being
 worked on in a private branch by the lead core developer, irungentoo.
 The latest word is that DHT is currently working over TCP, but he's
@@ -31,7 +31,7 @@ Toxcore—[Multi-device](https://github.com/GrayHatter/toxcore/tree/multi-device
 still in a very early, hardly-working stage of development, but if you
 like the idea of testing extremely buggy code that may or may not delete
 your profile, you can try the [Multi-device
-version](https://github.com/GrayHatter/uTox/tree/multidevice) of *µTox*.
+version](https://github.com/GrayHatter/uTox/tree/multidevice) of _µTox_.
 **(Note: backup your save.tox profile first.)**
 
 Finally, we would like to offer a heartfelt thank you to

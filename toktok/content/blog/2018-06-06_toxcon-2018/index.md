@@ -15,6 +15,6 @@ lots of talks and other cool things to see.
 
 For more details join the
 [\#toxcon2018](https://webchat.freenode.net/?channels=#toxcon2018) IRC
-channel on Freenode and contact *robinli*, *sudden6* or *zoff99*.
+channel on Freenode and contact _robinli_, _sudden6_ or _zoff99_.
 
 More information will be revealed in a future post.

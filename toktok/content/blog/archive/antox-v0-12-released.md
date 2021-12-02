@@ -15,11 +15,11 @@ The major change in this release which may cause confusion is the introduction o
 
 Some other notable changes are:
 
-*   Nicer looking tabs in the main section
-*   You can now accept and reject file transfers
-*   File transfer speed is now displayed
-*   Better ordering and searching of the contacts list
-*   The Tox ID can now be found under the 'Advanced' tab of Settings
-We will soon have A/V in antox as well. The functions have already been wrapped in jToxCore and are just being proof-read as we speak to make sure it's correct. Once merged and ready, audio is the first function I want to get into antox.
+- Nicer looking tabs in the main section
+- You can now accept and reject file transfers
+- File transfer speed is now displayed
+- Better ordering and searching of the contacts list
+- The Tox ID can now be found under the 'Advanced' tab of Settings
+  We will soon have A/V in antox as well. The functions have already been wrapped in jToxCore and are just being proof-read as we speak to make sure it's correct. Once merged and ready, audio is the first function I want to get into antox.
 
 **Edit: **If you tick "skip registration" an account name is still required so that multiple tox id's can be used. It uses the account name you entered as the file name for the tox save so that when you login, it loads the appropriate tox id

@@ -15,4 +15,4 @@ Another day, another release with 40+ changes and bug fixes. A summary of the ma
 4.  Fixed truncating the last letter of strings in names, messages etc.
 5.  User is alerted to no internet connectivity when using Antox
 6.  Italian and German translations updated
-The updated APK will take a while to propagate through the Google servers but you should be receiving it shortly. As always, if you find a bug please report it on the Github issues page so it can be fixed. Please submit Google crash reports as well when possible.
+    The updated APK will take a while to propagate through the Google servers but you should be receiving it shortly. As always, if you find a bug please report it on the Github issues page so it can be fixed. Please submit Google crash reports as well when possible.

@@ -6,6 +6,7 @@ tags:
 ---
 
 Howdy folks, I feel like it's a good time to get you all up to speed with Tox development.
+
 <!-- more -->
 
 ##GSoC

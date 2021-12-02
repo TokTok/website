@@ -26,15 +26,13 @@ get better response on IRC.
 Here is a non-exhaustive list of things you could help with, just to
 give an idea.
 
-Non-programming
-===============
+# Non-programming
 
 You don't have to know programming in order to help. You can help by
 testing nightly builds of clients and translating clients to different
 languages.
 
-Testing clients
----------------
+## Testing clients
 
 You can help by testing nightly builds of Tox clients, the
 in-development, yet to be released, versions of clients, and reporting
@@ -57,8 +55,7 @@ running and the version of it, the version of the Tox client you are
 running, exact steps on to how to reproduce the issue you are having and
 what you have expected to happen instead when you took those steps.
 
-Translating clients
--------------------
+## Translating clients
 
 Some of the clients support multiple languages in their user interface,
 you can help translate the user interface to any language you know and
@@ -66,15 +63,13 @@ correct existing translations if you find them unsatisfactory.
 
 Here are links for some of clients:
 
--   [Antidote](https://github.com/Antidote-for-Tox/Antidote/blob/d4018af502d7cb82d9f477e2078227b89a8d1d3a/FAQ/en.md#translations)
--   [qTox](https://github.com/qTox/qTox/wiki/Translating)
--   [uTox](https://github.com/uTox/uTox/tree/develop/langs)
+- [Antidote](https://github.com/Antidote-for-Tox/Antidote/blob/d4018af502d7cb82d9f477e2078227b89a8d1d3a/FAQ/en.md#translations)
+- [qTox](https://github.com/qTox/qTox/wiki/Translating)
+- [uTox](https://github.com/uTox/uTox/tree/develop/langs)
 
-Programming-related
-===================
+# Programming-related
 
-Software development
---------------------
+## Software development
 
 Anyone with programming background is welcome, as we have quite diverse
 codebases. We could use help of people familiar with any of C, C++, Go,
@@ -87,8 +82,7 @@ Also, you don't have to write code to contribute. Reviewing the code
 that is considered for merging into the codebase is also a great way to
 help.
 
-Website development
--------------------
+## Website development
 
 We are in need of a website developer/designer or anyone familiar with
 HTML, CSS, Bootstrap, Jinja 2 templates and Python. The person currently
@@ -102,8 +96,7 @@ and Python for page generation. We limit the use of JavaScript to the
 point that the website is perfectly functional without it while enabling
 it adds optional enhancements.
 
-Packaging
----------
+## Packaging
 
 We are in need of package maintainers (to the point that we don't have
 packages for Ubuntu 17.10 (Artful) at all), anyone familiar with shell
