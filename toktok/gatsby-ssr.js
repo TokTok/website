@@ -1,5 +1,5 @@
 // replace inline css/scss with links
-exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
+exports.onPreRenderHTML = ({getHeadComponents, replaceHeadComponents}) => {
   if (process.env.NODE_ENV !== "production") {
     return;
   }
