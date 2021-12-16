@@ -46,7 +46,7 @@ toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
 .PHONY: hs-toxcore
 hs-toxcore:
 	if [ -d $@ ]; then \
-		cd $@ && if [ -e .git ]; then git pull; fi; \
+		cd $@ && if [ -e .git -a "$(git rev-parse --abbrev-ref HEAD)" != "HEAD" ]; then git pull; fi; \
 	else \
 		git clone --depth=1 https://github.com/TokTok/hs-toxcore $@; \
 	fi
