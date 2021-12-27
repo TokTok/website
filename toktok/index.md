@@ -46,7 +46,7 @@ coverage, you could familiarise yourself with the code by writing some tests.
 # Contact us
 
 If you're interested in what we're doing, feel free to stop by on IRC in
-[#toktok on Freenode](irc://irc.freenode.net/#toktok). Feel free to stick
+[#toktok on LiberaChat](irc://irc.libera.chat/#toktok). Feel free to stick
 around and discuss TokTok related topics. If you do join, please stay on topic
 and respect other people.
 
