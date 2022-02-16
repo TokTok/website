@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND="noninteractive"
 
@@ -7,11 +7,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  build-essential \
  curl \
  git \
+ graphviz \
  make \
  pandoc \
  python3 \
  python3-bs4 \
- python3-dnspython \
+ python3-pip \
  python3-requests \
  python3-urllib3 \
  python3-xdg \
@@ -19,9 +20,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  ruby-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-RUN curl -s -o linkchecker.deb http://ftp.debian.org/debian/pool/main/l/linkchecker/linkchecker_10.0.1-2_amd64.deb \
- && dpkg -i linkchecker.deb \
- && rm linkchecker.deb
+# hadolint ignore=DL3013
+RUN pip install --no-cache-dir LinkChecker
 
 RUN ["gem", "install", "--no-document", "jekyll", "guard-livereload", "mdl"]
 
