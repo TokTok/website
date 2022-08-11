@@ -38,7 +38,8 @@ tracker](https://github.com/TokTok/c-toxcore/issues).
 # Contributing
 
 Check out our [roadmap](roadmap.html) and
-[changelog](changelog/c-toxcore.html). If you want to help, you could start by
+[changelog](https://github.com/TokTok/c-toxcore/blob/master/CHANGELOG.md).
+If you want to help, you could start by
 [reviewing](reviews.html) pull requests. You can view the list of
 [repositories](repos.html) and their build status. If one of them has low
 coverage, you could familiarise yourself with the code by writing some tests.
