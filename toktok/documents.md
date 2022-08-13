@@ -35,3 +35,7 @@ Other documents:
 -   [ToxCon 2017 Slides and photos](https://github.com/zoff99/ToxCon2017/blob/master/README.md)
 -   [ToxCon 2018 Slides and photos](https://github.com/zoff99/ToxCon2018/blob/master/README.md)
 -   [ToxCon 2019 Slides and photos](https://github.com/zoff99/ToxCon2019/blob/master/README.md)
+-   [rC3 2020 Infos](https://github.com/zoff99/rC3_2020/blob/main/README.md)
+-   [rC3 2020 Talk - An Introduction to Tox](https://zoff99.github.io/rC3_2020/)
+-   [rC3 2020 Talk - Adopting the Noise Key Exchange in Tox](https://media.ccc.de/v/rc3-709912-adopting_the_noise_key_exchange_in_tox)
+-   [rC3 2021 Infos](https://github.com/zoff99/rC3_2021/blob/master/README.md)
