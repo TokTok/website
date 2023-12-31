@@ -18,5 +18,4 @@ branches:
           - "Header rules - toktok"
           - "Pages changed - toktok"
           - "Redirect rules - toktok"
-          - "Mixed content - toktok"
           - "netlify/toktok/deploy-preview"

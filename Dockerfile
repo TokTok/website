@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # hadolint ignore=DL3013
 RUN pip install --no-cache-dir LinkChecker
 
-RUN ["gem", "install", "--no-document", "jekyll", "guard-livereload", "mdl"]
+RUN ["gem", "install", "--no-document", "jekyll:4.2.2", "guard-livereload", "mdl"]
 
 RUN groupadd -r -g 1000 builder \
  && useradd --no-log-init -r -g builder -u 1000 builder

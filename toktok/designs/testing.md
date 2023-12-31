@@ -145,36 +145,36 @@ follows:
 The test input is a length-prefixed test name and an arbitrary piece of data.
 The meaning of that data depends on the test name.
 
-Field     | Type     | Length
---------- | -------- | ------
-length    | `Int`    | 8 bytes
-test name | `String` | `$length` bytes
-test data | `Bytes`  | Depends on test name
+| Field     | Type     | Length               |
+| --------- | -------- | -------------------- |
+| length    | `Int`    | 8 bytes              |
+| test name | `String` | `$length` bytes      |
+| test data | `Bytes`  | Depends on test name |
 
 ### Test Result (SUT’s stdout)
 
 In case of error, a `Failure` message is returned:
 
-Field            | Type     | Length
----------------- | -------- | ------
-0x00 (`Failure`) | `Tag`    | 1 byte
-length           | `Int`    | 8 bytes
-error message    | `String` | `$length` bytes
+| Field            | Type     | Length          |
+| ---------------- | -------- | --------------- |
+| 0x00 (`Failure`) | `Tag`    | 1 byte          |
+| length           | `Int`    | 8 bytes         |
+| error message    | `String` | `$length` bytes |
 
 In case of success, an arbitrary piece of data is returned, depending on the
 test name in the input.
 
-Field            | Type     | Length
----------------- | -------- | ------
-0x01 (`Success`) | `Tag`    | 1 byte
-result data      | `Bytes`  | Depends on test name
+| Field            | Type     | Length               |
+| ---------------- | -------- | -------------------- |
+| 0x01 (`Success`) | `Tag`    | 1 byte               |
+| result data      | `Bytes`  | Depends on test name |
 
 Tests can be skipped by sending a `Skipped` result. These tests will be
 ignored and reported as successful.
 
-Field            | Type     | Length
----------------- | -------- | ------
-0x02 (`Skipped`) | `Tag`    | 1 byte
+| Field            | Type     | Length |
+| ---------------- | -------- | ------ |
+| 0x02 (`Skipped`) | `Tag`    | 1 byte |
 
 ## Reference cross-validation
 
