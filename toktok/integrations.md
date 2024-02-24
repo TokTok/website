@@ -31,6 +31,7 @@ yourself to this page.
 *   [Toxygen](https://github.com/toxygen-project/toxygen)
 *   [Toxy](https://github.com/alexbakker/Toxy)
 *   [Toxzilla](https://github.com/toxzilla/app)
+*   [TRIfA Material](https://github.com/Zoxcore/trifa_material)
 *   [uTox](https://github.com/uTox/uTox)
 *   [Venom](https://github.com/naxuroqa/Venom)
 
