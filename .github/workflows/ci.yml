@@ -7,6 +7,9 @@ on:
     branches: [master]
 
 jobs:
+  common:
+    uses: TokTok/ci-tools/.github/workflows/common-ci.yml@master
+
   docker:
     runs-on: ubuntu-latest
     steps:
