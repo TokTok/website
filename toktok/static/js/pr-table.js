@@ -54,7 +54,7 @@ function reloadPrTable() {
     unstable: "&#x1f6a7;",
   };
 
-  fetch("https://git-critique.herokuapp.com/hello/pulls", requestInit)
+  fetch("https://github-tools.onrender.com/hello/pulls", requestInit)
   .then(function(response) { return response.json(); })
   .then(function(json) {
     var newRepoSection = document.createElement("div");
