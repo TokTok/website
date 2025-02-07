@@ -1,3 +1,5 @@
 ---
-exclude:
-  - "**/*.md"
+restylers:
+  - pyment:
+      enabled: false
+  - "*"

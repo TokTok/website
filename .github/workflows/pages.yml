@@ -6,7 +6,7 @@ on:
 
 # Cancel old builds when pushing new commits.
 concurrency:
-  group: pages-${{ github.event.pull_request.number || github.ref }}
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:

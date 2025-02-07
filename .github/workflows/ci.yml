@@ -1,14 +1,12 @@
 name: ci
 
 on:
-  push:
-    branches: [master]
   pull_request:
     branches: [master]
 
 # Cancel old builds when pushing new commits.
 concurrency:
-  group: ci-${{ github.event.pull_request.number || github.ref }}
+  group: ci-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
