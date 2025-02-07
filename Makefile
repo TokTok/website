@@ -1,26 +1,23 @@
-WEB_NAME := toktok.github.io
-
-ifneq ($(GITHUB_TOKEN),)
-WEB_REPO := https://$(GITHUB_TOKEN)@github.com/TokTok/$(WEB_NAME)
-else
-WEB_REPO := git@github.com:TokTok/$(WEB_NAME)
-endif
+REPOS :=		\
+	c-toxcore	\
+	qTox
 
 #
 # build the website with jekyll
 #
-toktok-site: $(shell which jekyll) $(shell find toktok -type f) changelog roadmap spec
+toktok-site: $(shell which jekyll) $(shell find toktok -type f) changelog spec
 	rm -rf $@
 	cd toktok && jekyll build && mv _site ../$@
 
 #
 # single pages, generated from external content
 #
-changelog: toktok/changelog/c-toxcore.md
-roadmap: toktok/roadmap/c-toxcore.md
-toktok/%/c-toxcore.md: toktok/%/c-toxcore.md.dist
-	cp $< $@
-	curl https://git-critique.herokuapp.com/hello/$* >> $@
+changelog: $(patsubst %,toktok/changelog/%.md,$(REPOS))
+toktok/changelog/%.md: toktok/changelog/_template.md
+	sed -e 's/@REPO@/$*/g' $< > $@
+	curl "https://raw.githubusercontent.com/TokTok/$*/refs/heads/master/CHANGELOG.md" \
+		| sed -E -e 's/\[(\w*)\]([^(])/(\1)\2/' \
+		>> $@
 
 spec: toktok/spec.md
 toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
@@ -36,7 +33,7 @@ toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
 	    -f latex+lhs			\
 	    -t gfm				\
 	    src/Network/Tox.tex 		\
-	    | sed -e '/```.*literate/,/```/d'	\
+	    | sed -e '/``` haskell/,/```/d'	\
 	  >> ../$@;				\
 	  find . -name "*.lhs" -delete;		\
 	  git checkout .;			\
@@ -65,12 +62,3 @@ check:
 	echo "[filtering]" > ~/.linkchecker/linkcheckerrc
 	echo "ignorewarnings=ignore-url,http-robots-denied,https-certificate-error" >> ~/.linkchecker/linkcheckerrc
 	linkchecker --ignore-url "https://toktok.ltd.*" --ignore-url "https://msgpack.org.*" --ignore-url "https://travis-ci.org.*" --ignore-url "irc://.*" --ignore-url "^javascript:" toktok-site
-
-upload: toktok-site
-	@test -d $(WEB_NAME) || git clone --depth=1 $(WEB_REPO)
-	rm -rf $(WEB_NAME)/*
-	mv toktok-site/* $(WEB_NAME)/
-	rmdir toktok-site
-	cd $(WEB_NAME) && git add -A .
-	cd $(WEB_NAME) && git commit --amend --reset-author -m'Updated website'
-	cd $(WEB_NAME) && git push --force --quiet

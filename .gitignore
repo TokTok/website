@@ -1,3 +1,6 @@
 /hs-toxcore
 /toktok-site
 _site
+
+# Local Netlify folder
+.netlify

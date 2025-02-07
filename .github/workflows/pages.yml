@@ -1,22 +1,30 @@
-name: ci
+name: pages
 
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 # Cancel old builds when pushing new commits.
 concurrency:
-  group: ci-${{ github.event.pull_request.number || github.ref }}
+  group: pages-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
   common:
     uses: TokTok/ci-tools/.github/workflows/common-ci.yml@master
 
-  docker:
+  deploy:
     runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+
     steps:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -27,9 +35,12 @@ jobs:
           outputs: type=docker
       - name: Extract toktok-site directory from docker image
         run: docker run --rm --entrypoint tar toxchat/toktok.github.io:latest -C /home/builder/build -c toktok-site | tar -x
-      - name: Upload toktok-site to artifacts
-        uses: actions/upload-artifact@v4
+      - name: Set-up Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: toktok-site
           path: toktok-site
-          if-no-files-found: error
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

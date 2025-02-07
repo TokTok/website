@@ -11,7 +11,7 @@ stability.
 
 A concrete roadmap built from GitHub issues and pull requests can be found here:
 
--   [c-toxcore](roadmap/c-toxcore.html)
+-   [c-toxcore](https://github.com/TokTok/c-toxcore/milestones)
 
 The milestones presented here are flexible. Priorities might change in the
 future as the landscape shifts and our target audience requires features at
