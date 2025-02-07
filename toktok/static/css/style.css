@@ -1,6 +1,6 @@
 /* Body and core element styling */
 body {
-	font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-family: "Lato", "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 	font-style: normal;
 	text-rendering: optimizelegibility;
 	font-weight: 300;
@@ -48,8 +48,8 @@ table a:hover {
 }
 
 table th {
-  background-color: #eee;
-  border-bottom: 1px solid #ddd;
+  background-color: #666;
+  border-bottom: 1px solid #333;
   padding: 8px 12px;
   text-align: left;
   font-weight: bold;
@@ -62,11 +62,11 @@ table td {
   /*border-bottom: 1px solid #ccc;*/
 }
 table tr:hover td {
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 table tr:nth-child(odd) {
-  background-color: rgba(0,0,0,.04);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* ID */
@@ -112,8 +112,8 @@ table tr:nth-child(odd) {
 .pr-table .tooltiptext {
   display: none;
   position: absolute;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #333;
+  border: 1px solid #111;
   padding: 4px 8px;
   z-index: 99999;
 }
@@ -467,7 +467,7 @@ tbody th:first-child, thead th {
 		display: block;
 		margin: auto;
 		/* Fixes carousel breaking at certain resolutions */
-		min-width: 240px; 
+		min-width: 240px;
 	}
 	.sliderinner > ul > li > div > img { max-height: 500px;	}
 }
@@ -806,7 +806,7 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 	white-space: pre-wrap;
 }
 
-/* woff for most browsers (not IE8) and ttf for Android older than v4.4 */
+/* FiraSans woff for most browsers (not IE8) and ttf for Android older than v4.4 */
 @font-face{
 	font-family: "Fira Sans";
 	src: local("Fira Sans UltraLight"),
@@ -831,6 +831,25 @@ input[type=checkbox]:checked ~ #hamlabel:before {
 		url("../fonts/FiraSans-Regular.woff") format("woff"),
 		url("../fonts/FiraSans-Regular.ttf") format("truetype");
 	font-weight: 400;
+	font-style: normal;
+}
+
+/* Lato */
+@font-face{
+	font-family: "Lato";
+	src: local("Lato Regular"),
+		url("../fonts/Lato-Regular.woff") format("woff"),
+		url("../fonts/Lato-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: "Lato";
+	src: local("Lato Bold"),
+		url("../fonts/Lato-Bold.woff") format("woff"),
+		url("../fonts/Lato-Bold.ttf") format("truetype");
+	font-weight: 700;
 	font-style: normal;
 }
 

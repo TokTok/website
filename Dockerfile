@@ -20,16 +20,16 @@ RUN . /path/to/venv/bin/activate \
 RUN ["gem", "install", "--no-document", "guard-livereload", "mdl"]
 
 RUN addgroup -S builder && adduser -SDH -G builder builder
-
-WORKDIR /home/builder/build
-COPY toktok /home/builder/build/toktok/
-COPY Makefile /home/builder/build/
-COPY entrypoint.sh /home/builder/
-
-RUN ["chown", "-R", "builder:builder", "/home/builder"]
 USER builder
 
-RUN ["make", "hs-toxcore"]
+WORKDIR /home/builder/build
+COPY --chown=builder:builder Makefile /home/builder/build/
+COPY --chown=builder:builder entrypoint.sh /home/builder/
+
+COPY --chown=builder:builder toktok/spec.md.dist /home/builder/build/toktok/
+RUN ["make", "toktok/spec.md"]
+
+COPY --chown=builder:builder toktok/ /home/builder/build/toktok/
 RUN ["make", "toktok-site"]
 
 COPY .md-style.rb /home/builder/build/

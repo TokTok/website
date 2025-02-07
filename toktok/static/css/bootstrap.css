@@ -5,8 +5,8 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
-/*! 
- * I removed most of bootstrap. Ctrl+F and if you can't find it, copy it over from bootstrap.big.css 
+/*!
+ * I removed most of bootstrap. Ctrl+F and if you can't find it, copy it over from bootstrap.big.css
 */
 
 html {
@@ -616,8 +616,8 @@ samp {
 code {
   padding: 2px 4px;
   font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: #6e96d4;
+  font-weight: 700;
   border-radius: 4px;
 }
 kbd {
