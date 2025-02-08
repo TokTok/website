@@ -25,11 +25,11 @@ jobs:
         with:
           tags: toxchat/toktok.github.io:latest
           outputs: type=docker
-      - name: Extract toktok-site directory from docker image
-        run: docker run --rm --entrypoint tar toxchat/toktok.github.io:latest -C /home/builder/build -c toktok-site | tar -x
-      - name: Upload toktok-site to artifacts
+      - name: Extract _site directory from docker image
+        run: docker run --rm --entrypoint tar toxchat/toktok.github.io:latest -C /home/builder/build -c _site | tar -x
+      - name: Upload _site to artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: toktok-site
-          path: toktok-site
+          name: _site
+          path: _site
           if-no-files-found: error

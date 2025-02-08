@@ -35,7 +35,8 @@ RUN ["make", "toktok-site"]
 COPY .md-style.rb /home/builder/build/
 RUN ["make", "lint"]
 RUN . /path/to/venv/bin/activate \
- && make check
+ && make check \
+ && mv toktok-site _site
 
-WORKDIR /home/builder/build/toktok-site
+WORKDIR /home/builder/build/_site
 ENTRYPOINT ["/home/builder/entrypoint.sh"]

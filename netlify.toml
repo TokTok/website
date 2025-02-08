@@ -1,3 +1,0 @@
-[build]
-command = "gem install --no-document jekyll:4.2.2 guard-livereload sass-embedded:1.6.2 && make hs-toxcore && make toktok-site"
-publish = "toktok-site"

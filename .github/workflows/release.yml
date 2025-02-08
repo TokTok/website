@@ -15,3 +15,11 @@ concurrency:
 jobs:
   release:
     uses: TokTok/ci-tools/.github/workflows/release-drafter.yml@master
+
+  netlify:
+    uses: TokTok/ci-tools/.github/workflows/netlify.yml@master
+    with:
+      dockerfile: Dockerfile
+      path: /home/builder/build
+    secrets:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
