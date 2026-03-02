@@ -19,7 +19,7 @@ To work on the website you need the following things:
 - linkchecker via `apt-get install linkchecker`
   (optional for link checking).
 
-The follwing make targets are available:
+The following make targets are available:
 
 - `make all`: build the complete website including external content.
 - `make changelog`: download changelogs (included in `all`)
