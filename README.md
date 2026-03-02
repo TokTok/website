@@ -1,8 +1,8 @@
-# website
+# Website for Developers
 
 The new website with something better than Yst (also, change the title)
 
-## Development
+## Development Hacks
 
 To work on the website you need the following things:
 
