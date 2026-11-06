@@ -32,7 +32,7 @@ toktok/spec.md: hs-toxcore $(shell find hs-toxcore -name "*.lhs" 2> /dev/null)
 	  pandoc				\
 	    -f latex+lhs			\
 	    -t gfm				\
-	    src/Network/Tox.tex 		\
+	    src/Tox/Toxcore.tex 		\
 	    | sed -e '/``` haskell/,/```/d'	\
 	  >> ../$@;				\
 	  find . -name "*.lhs" -delete;		\
