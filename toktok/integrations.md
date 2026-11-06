@@ -24,6 +24,8 @@ yourself to this page.
     (Chat client for Julia )
 *   [qTox](https://github.com/qTox/qTox)
 *   [Ricin](https://github.com/RicinApp/Ricin)
+*   [toxee](https://github.com/agentx-icu/toxee)
+    (Flutter, one codebase for desktop and mobile)
 *   [Toxer](https://gitlab.com/Toxer/toxer-desktop)
 *   [Toxic](https://github.com/JFreegman/toxic)
 *   [Toxygen](https://github.com/toxygen-project/toxygen)
@@ -44,6 +46,7 @@ yourself to this page.
 *   [TRIfA](https://github.com/zoff99/ToxAndroidRefImpl) (Android)
 *   [Protox](https://gitlab.com/Monsterovich/protox) (Android)
 *   [aTox](https://github.com/evilcorpltd/aTox) (Android)
+*   [toxee](https://github.com/agentx-icu/toxee) (Android, iOS)
 
 # Hardware
 
@@ -71,6 +74,8 @@ yourself to this page.
 
 *   [Bash](https://github.com/mensinda/bash-toxcore)
 *   [C#](https://github.com/alexbakker/SharpTox)
+*   [Dart](https://github.com/agentx-icu/tim2tox) Tim2Tox
+    (Dart/Flutter FFI layer over c-toxcore)
 *   [Go](https://github.com/codedust/go-tox) go-tox
 *   [Go](https://github.com/TokTok/go-toxcore-c) go-toxcore
 *   [Go](https://github.com/xhebox/gtox) gtox
