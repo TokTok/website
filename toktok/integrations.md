@@ -24,6 +24,7 @@ yourself to this page.
     (Chat client for Julia )
 *   [qTox](https://github.com/qTox/qTox)
 *   [Ricin](https://github.com/RicinApp/Ricin)
+*   [Skymu](https://skymu.app/)
 *   [Toxer](https://gitlab.com/Toxer/toxer-desktop)
 *   [Toxic](https://github.com/JFreegman/toxic)
 *   [Toxygen](https://github.com/toxygen-project/toxygen)
