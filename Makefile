@@ -54,8 +54,7 @@ hs-toxcore:
 lint:
 	mdl -i -w -s .md-style.rb $$(find toktok -name "*.md" \
 		-and -not -wholename "toktok/spec.md" \
-		-and -not -wholename "toktok/changelog/c-toxcore.md" \
-		-and -not -wholename "toktok/roadmap/c-toxcore.md")
+		-and -not -wholename "toktok/changelog/c-toxcore.md")
 
 check:
 	mkdir -p ~/.linkchecker/

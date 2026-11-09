@@ -6,7 +6,6 @@ RUN ["apk", "add", "--no-cache", \
  "g++", \
  "gcc", \
  "git", \
- "graphviz", \
  "jekyll", \
  "make", \
  "pandoc", \

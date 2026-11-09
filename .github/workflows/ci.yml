@@ -12,22 +12,3 @@ concurrency:
 jobs:
   common:
     uses: TokTok/ci-tools/.github/workflows/common-ci.yml@master
-
-  docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v4
-      - name: Docker Build
-        uses: docker/build-push-action@v7
-        with:
-          tags: toxchat/toktok.github.io:latest
-          outputs: type=docker
-      - name: Extract _site directory from docker image
-        run: docker run --rm --entrypoint tar toxchat/toktok.github.io:latest -C /home/builder/build -c _site | tar -x
-      - name: Upload _site to artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: _site
-          path: _site
-          if-no-files-found: error
