@@ -73,6 +73,7 @@ yourself to this page.
 # Language bindings
 
 *   [Bash](https://github.com/mensinda/bash-toxcore)
+*   [C#](https://github.com/TheSkymuTeam/Skymu/tree/master/Plugins/Tox/ToxCore.cs)
 *   [C#](https://github.com/alexbakker/SharpTox)
 *   [Dart](https://github.com/agentx-icu/tim2tox) Tim2Tox
     (Dart/Flutter FFI layer over c-toxcore)
